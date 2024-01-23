@@ -8,7 +8,7 @@ import { LockIcon } from '@/components/ui/lock-icon';
 export function Header() {
   return (
     <header className="flex justify-between h-20">
-      <div className="flex gap-20 items-center">
+      <div className="flex gap-20 items-center text-primary">
         <Link href="/">
           <Logo />
         </Link>
@@ -27,11 +27,11 @@ export function Header() {
       <div className="flex items-center gap-5">
         <Switch />
         <div className="flex items-center gap-2">
-          <Button className="flex gap-2 bg-transparent border rounded-full border-transparent  text-[#2463EB] hover:bg-transparent hover:border-gray-300">
+          <Button className="flex gap-2 bg-transparent border border-transparent  text-[#2463EB] hover:border-gray-300">
             <LockIcon />
             Log in
           </Button>
-          <Button className="bg-transparent border rounded-full px-6 py-5 text-black border-[rgba(16, 24, 40, 0.20)] hover:bg-transparent">
+          <Button className="bg-transparent border px-6 py-5 text-black border-[rgba(16, 24, 40, 0.20)]">
             Sign up
           </Button>
         </div>

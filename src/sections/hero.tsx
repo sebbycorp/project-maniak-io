@@ -1,3 +1,11 @@
+import { Badge } from '@/components/ui/badge';
+import { LinearGradient } from '@/components/ui/linear-gradient';
+
 export function Hero() {
-  return <div className="w-[340px] h-[800px] fill-[rgba(36, 99, 235, 0.8)] blur-xl"></div>;
+  return (
+    <div className="h-[800px] relative">
+      <Badge>Technology Evangelist | Advisor | Consultant</Badge>
+      <LinearGradient className="absolute bottom-0 left-1/2 -translate-x-1/2" />
+    </div>
+  );
 }
