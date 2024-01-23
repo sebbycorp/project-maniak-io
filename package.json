@@ -1,5 +1,6 @@
 {
-  "name": "@ampt-templates/nextjs",
+  "name": "maniak-site",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "build": "next build",
@@ -7,30 +8,44 @@
     "ampt:build": "ampt-next build",
     "ampt:dev": "next dev",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@ampt/data": "^1",
     "@ampt/nextjs": "^2",
     "@ampt/sdk": "^1",
-    "next": "13.5.4",
-    "react": "^18",
-    "react-dom": "^18"
+    "@radix-ui/react-slot": "^1.0.2",
+    "@radix-ui/react-switch": "^1.0.3",
+    "@types/node": "20.11.5",
+    "@types/react": "18.2.48",
+    "@types/react-dom": "18.2.18",
+    "autoprefixer": "10.4.17",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
+    "eslint": "8.56.0",
+    "eslint-config-next": "14.1.0",
+    "lucide-react": "^0.314.0",
+    "next": "14.1.0",
+    "postcss": "8.4.33",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "tailwind-merge": "^2.2.0",
+    "tailwindcss": "3.4.1",
+    "tailwindcss-animate": "^1.0.7",
+    "typescript": "5.3.3"
   },
-  "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "autoprefixer": "^10",
-    "eslint": "^8",
-    "eslint-config-next": "13.5.4",
-    "postcss": "^8",
-    "tailwindcss": "^3",
-    "typescript": "^5"
+  "lint-staged": {
+    "*.{ts,tsx}": "eslint --cache --fix",
+    "*.{ts,tsx,json,css,md}": "prettier --write"
   },
   "ampt": {
     "app": "project-maniak-io",
     "runtime": "nodejs18",
     "org": "maniak"
+  },
+  "devDependencies": {
+    "husky": "^8.0.0",
+    "prettier": "^3.2.4"
   }
 }
