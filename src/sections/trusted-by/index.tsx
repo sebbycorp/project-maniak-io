@@ -13,7 +13,7 @@ export function TrustedBy() {
       <div className="mt-12 grid grid-cols-5 gap-5">
         {trustedBy.map((el, i) => (
           <Card
-            className="flex justify-center items-center h-[175px] px-8 py-8 overflow-hidden"
+            className="flex justify-center items-center box-border h-[175px] max-h-[175px] px-8"
             key={i}
           >
             <Image src={el} alt="Card Image" className=" object-contain max-h-[140px]" />
