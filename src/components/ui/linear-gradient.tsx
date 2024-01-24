@@ -1,9 +1,10 @@
-export function LinearGradient({ className }: React.HTMLAttributes<HTMLDivElement>) {
+import { cn } from '@/lib/utils';
+
+export function LinearGradient({ className }: React.HTMLAttributes<SVGElement>) {
   return (
     <svg
-      className={className}
+      className={cn('w-screen', className)}
       xmlns="http://www.w3.org/2000/svg"
-      width="1440"
       height="316"
       viewBox="0 0 1440 316"
       fill="none"
