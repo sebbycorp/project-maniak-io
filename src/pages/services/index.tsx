@@ -1,6 +1,5 @@
 import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 import { SubscribeLayout } from '@/layouts/subscribe-layout';
-import { Link } from 'lucide-react';
 
 export default function Home() {
   return (
