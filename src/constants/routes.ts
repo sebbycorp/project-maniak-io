@@ -1,11 +1,11 @@
 export const routes = [
   {
     name: 'Blog',
-    url: '/Services',
+    url: '/blog',
   },
   {
     name: 'Services',
-    url: '/Services',
+    url: '/services',
   },
   {
     name: 'Playground',
