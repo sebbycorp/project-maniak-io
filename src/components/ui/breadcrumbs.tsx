@@ -41,7 +41,7 @@ export function Breadcrumbs({ items }: BreadcrumbsProps) {
                   className={`ms-1 text-sm font-medium text-[#155EEF] underline underline-offset-2 ${
                     item.isCurrentPage
                       ? 'text-gray-500'
-                      : 'text-gray-700 hover:text-blue-600 md:ms-2 dark:text-gray-400 dark:hover:text-white'
+                      : 'hover:text-blue-600 md:ms-2 dark:text-gray-400 dark:hover:text-white'
                   }`}
                 >
                   {item.title}
