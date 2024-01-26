@@ -1,3 +1,4 @@
+import { ContactUs } from '@/components/modals/contact-us';
 import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 import { Button } from '@/components/ui/button';
 import { SubscribeLayout } from '@/layouts/subscribe-layout';
@@ -16,7 +17,7 @@ export default function Home() {
       <div>
         <div className="flex items-center justify-between">
           <h2 className="text-[48px] font-semibold text-[#101828] mt-2">Services</h2>
-          <Button className="bg-[#155EEF]">Contact us</Button>
+          <ContactUs />
         </div>
         <p className="text-[#7F8A99] font-medium mt-4">
           Explore our latest insights on DevOps. Get practical tips on tools like Azure, Docker, and
