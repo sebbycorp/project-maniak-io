@@ -61,7 +61,7 @@ export default function Blog({ posts }: { posts: Post[] }) {
       </div>
       <div className="grid grid-cols-3 gap-8 mt-20 mb-14">
         {paginatedPosts.map((el, i) => (
-          <Card key={i}>
+          <Card className="flex flex-col items-start" key={i}>
             {el.tags ? (
               <div className="inline-flex gap-1 items-center bg-[#EFF4FF] rounded-[24px] p-2">
                 {el.tags.map((tag, i) => (
@@ -71,9 +71,8 @@ export default function Blog({ posts }: { posts: Post[] }) {
                 ))}
               </div>
             ) : null}
-
-            <h3 className="text-2xl mt-3 text-[#101828] tracking-[0.48px] font-semibold">
-              {el.title}
+            <h3 className="text-2xl mt-3 text-[#101828] max-w-80 tracking-[0.48px] font-semibold bloc">
+              <div className="line-clamp-2">{el.title}</div>
             </h3>
 
             <p className="mt-4 mb-8 text-[#7F8A99] tracking-[0.32px] font-medium">
@@ -82,7 +81,7 @@ export default function Blog({ posts }: { posts: Post[] }) {
 
             <Link
               href={'blog' + '/' + el.slug}
-              className="text-[#2463EB] underline underline-offset-2"
+              className="text-[#2463EB] underline underline-offset-2 inline-block mt-auto"
             >
               Learn more
             </Link>
@@ -99,7 +98,11 @@ export default function Blog({ posts }: { posts: Post[] }) {
               key={i}
               onClick={() => router.push(pathname + '?' + createQueryString('page', i + 1))}
             >
-              <PaginationLink isActive={Number(searchParams.get('page')) === i + 1}>
+              <PaginationLink
+                isActive={
+                  searchParams.get('page') ? Number(searchParams.get('page')) === i + 1 : i === 0
+                }
+              >
                 {i + 1}
               </PaginationLink>
             </PaginationItem>
