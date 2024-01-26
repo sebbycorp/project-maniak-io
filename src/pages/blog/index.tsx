@@ -9,6 +9,7 @@ import {
 } from '@/components/ui/pagination';
 import { Separator } from '@/components/ui/separator';
 import { getAllPosts, Post } from '@/helpers';
+import { SubscribeLayout } from '@/layouts/subscribe-layout';
 import Link from 'next/link';
 import { usePathname, useSearchParams } from 'next/navigation';
 import { useRouter } from 'next/router';
@@ -112,6 +113,10 @@ export default function Blog({ posts }: { posts: Post[] }) {
     </div>
   );
 }
+
+Blog.getLayout = function getLayout(page: React.ReactNode) {
+  return <SubscribeLayout>{page}</SubscribeLayout>;
+};
 
 export function getStaticProps() {
   const posts = getAllPosts();

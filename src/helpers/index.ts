@@ -8,7 +8,6 @@ type PostData = {
   description: string;
   tags: string[];
   image?: string;
-  readTime: string;
 };
 
 export type Post = PostData & {

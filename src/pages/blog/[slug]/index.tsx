@@ -1,19 +1,22 @@
 import { PostContent } from '@/components/post-content';
 import { Post, getPostData, getPostsFiles } from '@/helpers';
+import { PostLayout } from '@/layouts/post-layout';
+import { SubscribeLayout } from '@/layouts/subscribe-layout';
+import { atom, useSetAtom } from 'jotai';
 import { GetStaticPropsContext } from 'next';
+import { useEffect } from 'react';
 
 interface Params {
   slug: string;
 }
 
 export default function BlogPage({ post }: { post: Post }) {
-  console.log(post);
-  return (
-    <>
-      <PostContent post={post} />
-    </>
-  );
+  return <PostContent post={post} />;
 }
+
+BlogPage.getLayout = function getLayout(page: React.ReactNode) {
+  return <PostLayout>{page}</PostLayout>;
+};
 
 export function getStaticProps(context: GetStaticPropsContext) {
   const { params } = context;
