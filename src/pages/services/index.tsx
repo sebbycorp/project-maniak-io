@@ -6,7 +6,7 @@ import { ServicesCards } from '@/sections/services-cards';
 
 export default function Home() {
   return (
-    <div>
+    <div className="my-16">
       <Breadcrumbs
         items={[
           { title: 'Home', url: '/' },

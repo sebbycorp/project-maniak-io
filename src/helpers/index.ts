@@ -6,7 +6,7 @@ type PostData = {
   date: string;
   title: string;
   description: string;
-  tags: string;
+  tags: string[];
 };
 
 export type Post = PostData & {

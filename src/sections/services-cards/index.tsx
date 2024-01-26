@@ -91,9 +91,9 @@ const data = [
 
 export function ServicesCards() {
   return (
-    <div className="my-8 grid grid-cols-2 gap-6">
+    <div className="mt-8 grid grid-cols-2 gap-6">
       {data.map((el, i) => (
-        <Card key={i} className="p-6 bg-[#F9FAFB]">
+        <Card key={i}>
           <div className="bg-[#3370E6] inline-block p-3 rounded-md">{el.icon}</div>
           <h4 className="mt-2 mb-4 text-2xl font-semibold">{el.title}</h4>
           <p className="text-lg text-[#7F8A99]">{el.description}</p>
