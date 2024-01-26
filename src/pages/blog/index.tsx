@@ -1,11 +1,47 @@
 import { Badge } from '@/components/ui/badge';
 import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 import { Card } from '@/components/ui/card';
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationLink,
+} from '@/components/ui/pagination';
+import { Separator } from '@/components/ui/separator';
 import { getAllPosts, Post } from '@/helpers';
 import Link from 'next/link';
+import { usePathname, useSearchParams } from 'next/navigation';
+import { useRouter } from 'next/router';
+import { useCallback } from 'react';
 
 export default function Blog({ posts }: { posts: Post[] }) {
-  console.log(posts);
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const postsPerPage = 9;
+
+  const searchParams = useSearchParams();
+
+  const createQueryString = useCallback(
+    (name: string, value: number) => {
+      const params = new URLSearchParams(searchParams.toString());
+      params.set(name, value.toString());
+
+      return params.toString();
+    },
+    [searchParams],
+  );
+
+  const startIndex = searchParams.get('page')
+    ? (Number(searchParams.get('page')) - 1) * postsPerPage
+    : 1;
+
+  const endIndex = startIndex + postsPerPage;
+
+  const paginatedPosts = posts.slice(startIndex, endIndex);
+
+  const paginationPages = Math.ceil(posts.length / postsPerPage);
+
   return (
     <div className="my-16">
       <Breadcrumbs
@@ -23,8 +59,8 @@ export default function Blog({ posts }: { posts: Post[] }) {
           journey better.
         </p>
       </div>
-      <div className="grid grid-cols-3 gap-8 my-20">
-        {posts.map((el, i) => (
+      <div className="grid grid-cols-3 gap-8 mt-20 mb-14">
+        {paginatedPosts.map((el, i) => (
           <Card key={i}>
             {el.tags ? (
               <div className="inline-flex gap-1 items-center bg-[#EFF4FF] rounded-[24px] p-2">
@@ -53,15 +89,33 @@ export default function Blog({ posts }: { posts: Post[] }) {
           </Card>
         ))}
       </div>
+
+      <Separator />
+
+      <Pagination className="mt-12">
+        <PaginationContent>
+          {[...Array(paginationPages)].map((_, i) => (
+            <PaginationItem
+              key={i}
+              onClick={() => router.push(pathname + '?' + createQueryString('page', i + 1))}
+            >
+              <PaginationLink isActive={Number(searchParams.get('page')) === i + 1}>
+                {i + 1}
+              </PaginationLink>
+            </PaginationItem>
+          ))}
+        </PaginationContent>
+      </Pagination>
     </div>
   );
 }
 
-export const getStaticProps = () => {
-  const data = getAllPosts();
+export function getStaticProps() {
+  const posts = getAllPosts();
+
   return {
     props: {
-      posts: data,
+      posts,
     },
   };
-};
+}
