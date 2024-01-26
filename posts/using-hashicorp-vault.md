@@ -11,3 +11,5 @@ tags:
 One challenge enterprises face today involves managing various certificates and ensuring their validity for critical applications deployed across multi-cloud environments. This integration enhances security by utilizing short-lived dynamic SSL certificates through HashiCorp Vault on the BIG-IP Next Platform.
 
 ## What is BIGIP NEXT
+
+![Terminal](../posts/using-hashicorp-vault/terminal.png)

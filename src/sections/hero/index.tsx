@@ -2,7 +2,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { LinearGradient } from '@/components/ui/linear-gradient';
 
-import img from '/assets/hero/hero.jpg';
+import img from '/public/hero/hero.jpg';
 import Image from 'next/image';
 
 export function Hero() {
@@ -25,7 +25,7 @@ export function Hero() {
         </Button>
       </div>
       <div>
-        <Image src={img} alt="/assets/hero/hero.jpt" />
+        <Image src={img} alt="Hero image" />
       </div>
       <LinearGradient className="absolute bottom-0 left-1/2 -translate-x-1/2 -z-10" />
     </div>

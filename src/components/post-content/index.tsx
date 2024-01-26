@@ -9,7 +9,7 @@ import { LinearGradient } from '@/components/ui/linear-gradient';
 import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarImage } from '@/components/ui/avatar';
 
-import avatar from '/assets/avatar/avatar.jpg';
+import avatar from '/public/avatar/avatar.jpg';
 
 export function PostContent({ post }: { post: Post }) {
   const { title, tags, date, content } = post;
