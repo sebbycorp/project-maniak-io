@@ -14,6 +14,7 @@ import avatar from '/public/avatar/avatar.jpg';
 import { toast } from 'sonner';
 
 import style from './markdown.module.css';
+import { clsx } from 'clsx';
 
 export function PostContent({ post }: { post: Post }) {
   const { title, tags, date, content } = post;
@@ -54,7 +55,7 @@ export function PostContent({ post }: { post: Post }) {
         <div></div>
       </div>
       <div>
-        <article className="container max-w-3xl py-24">
+        <article className={clsx(content && 'py-24', 'container', 'max-w-3xl')}>
           <ReactMarkdown
             components={{
               h1: 'h2',
