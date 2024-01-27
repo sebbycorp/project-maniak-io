@@ -4,12 +4,16 @@ import Image from 'next/image';
 import React from 'react';
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import ReactMarkdown from 'react-markdown';
+import ReactMarkdown, { Components } from 'react-markdown';
 import { LinearGradient } from '@/components/ui/linear-gradient';
 import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarImage } from '@/components/ui/avatar';
+import { CopyIcon } from '@radix-ui/react-icons';
 
 import avatar from '/public/avatar/avatar.jpg';
+import { toast } from 'sonner';
+
+import style from './markdown.module.css';
 
 export function PostContent({ post }: { post: Post }) {
   const { title, tags, date, content } = post;
@@ -50,8 +54,33 @@ export function PostContent({ post }: { post: Post }) {
         <div></div>
       </div>
       <div>
-        <article className="prose prose-slate prose-img:rounded-xl prose-headings:underline prose-a:text-blue-600 lg:prose-lg my-4">
-          <ReactMarkdown>{content}</ReactMarkdown>
+        <article className="container max-w-3xl py-24">
+          <ReactMarkdown
+            components={{
+              h1: 'h2',
+              h5: 'h4',
+              h6: 'h4',
+              code(props) {
+                const { children } = props;
+
+                return (
+                  <div className="relative border rounded-lg border-[#EAECF0] bg-[#F9FAFB] py-0 px-4">
+                    <p className="text-[#175CD3] py-4 max-w-[98%]">{children}</p>
+                    <CopyIcon
+                      className="absolute top-7 right-5 cursor-pointer"
+                      onClick={() => {
+                        navigator.clipboard.writeText(children as string);
+                        toast.success('Code copied successfully!');
+                      }}
+                    />
+                  </div>
+                );
+              },
+            }}
+            className={style.markdown}
+          >
+            {content}
+          </ReactMarkdown>
         </article>
         <hr />
       </div>

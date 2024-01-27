@@ -6,6 +6,7 @@ import { Layout } from 'lucide-react';
 import type { NextPage } from 'next';
 import type { AppProps } from 'next/app';
 import React from 'react';
+import { Toaster } from 'sonner';
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: React.ReactElement) => React.ReactNode;
@@ -18,5 +19,12 @@ type AppPropsWithLayout = AppProps & {
 export default function App({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout ?? ((page) => <BaseLayout>{page}</BaseLayout>);
 
-  return getLayout(<Component {...pageProps} />);
+  const ComponentWithlayout = getLayout(<Component {...pageProps} />);
+
+  return (
+    <React.Fragment>
+      <Toaster />
+      {ComponentWithlayout}
+    </React.Fragment>
+  );
 }
