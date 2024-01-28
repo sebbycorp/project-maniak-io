@@ -97,6 +97,7 @@ export default function Blog({ posts }: { posts: Post[] }) {
           {[...Array(paginationPages)].map((_, i) => (
             <PaginationItem
               key={i}
+              className="cursor-pointer"
               onClick={() => router.push(pathname + '?' + createQueryString('page', i + 1))}
             >
               <PaginationLink
