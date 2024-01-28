@@ -1,5 +1,5 @@
 import { PostContent } from '@/components/post-content';
-import { Post, getPostData, getPostsFiles } from '@/helpers';
+import { Post, getPostData, getPostsFiles } from '@/helpers/posts';
 import { PostLayout } from '@/layouts/post-layout';
 import { SubscribeLayout } from '@/layouts/subscribe-layout';
 import { atom, useSetAtom } from 'jotai';

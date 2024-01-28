@@ -8,7 +8,7 @@ export const routes = [
     url: '/services',
   },
   {
-    name: 'Playground',
-    url: '/playground',
+    name: 'Playgrounds',
+    url: '/playgrounds',
   },
 ];

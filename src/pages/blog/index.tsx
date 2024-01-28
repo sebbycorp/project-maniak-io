@@ -8,7 +8,7 @@ import {
   PaginationLink,
 } from '@/components/ui/pagination';
 import { Separator } from '@/components/ui/separator';
-import { getAllPosts, Post } from '@/helpers';
+import { getAllPosts, Post } from '@/helpers/posts';
 import { SubscribeLayout } from '@/layouts/subscribe-layout';
 import Link from 'next/link';
 import { usePathname, useSearchParams } from 'next/navigation';
@@ -81,7 +81,7 @@ export default function Blog({ posts }: { posts: Post[] }) {
             </p>
 
             <Link
-              href={'blog' + '/' + el.slug}
+              href={pathname + '/' + el.slug}
               className="text-[#2463EB] underline underline-offset-2 inline-block mt-auto"
             >
               Learn more

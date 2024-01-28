@@ -1,4 +1,4 @@
-import { Post } from '@/helpers';
+import { Post } from '@/helpers/posts';
 import { Link } from 'lucide-react';
 import Image from 'next/image';
 import React from 'react';
