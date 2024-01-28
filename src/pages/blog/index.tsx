@@ -35,7 +35,7 @@ export default function Blog({ posts }: { posts: Post[] }) {
 
   const startIndex = searchParams.get('page')
     ? (Number(searchParams.get('page')) - 1) * postsPerPage
-    : 1;
+    : 0;
 
   const endIndex = startIndex + postsPerPage;
 
