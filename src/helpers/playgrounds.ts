@@ -15,7 +15,7 @@ export type Playground = PlaygroundData & {
 
 const postsDirectory = path.join(process.cwd(), 'playgrounds');
 
-export function getPlaygroundFiles() {
+export function getPlaygroundsFiles() {
   return fs.readdirSync(postsDirectory);
 }
 
@@ -36,9 +36,9 @@ export function getPlaygroundData(postIdentifier: string) {
 }
 
 export function getAllPlaygrounds() {
-  const playgroundFiles = getPlaygroundFiles();
+  const playgroundsFiles = getPlaygroundsFiles();
 
-  const allPlaygrounds: Playground[] = playgroundFiles.map((playgroundFile) => {
+  const allPlaygrounds: Playground[] = playgroundsFiles.map((playgroundFile) => {
     return getPlaygroundData(playgroundFile);
   });
 

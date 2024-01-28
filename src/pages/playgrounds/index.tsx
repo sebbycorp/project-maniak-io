@@ -2,6 +2,7 @@ import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Playground, getAllPlaygrounds } from '@/helpers/playgrounds';
+import { SubscribeLayout } from '@/layouts/subscribe-layout';
 import clsx from 'clsx';
 import Link from 'next/link';
 import { useParams, usePathname, useSearchParams } from 'next/navigation';
@@ -104,6 +105,10 @@ export default function Playgrounds({ playgrounds }: { playgrounds: Playground[]
     </div>
   );
 }
+
+Playgrounds.getLayout = function getLayout(page: React.ReactNode) {
+  return <SubscribeLayout>{page}</SubscribeLayout>;
+};
 
 export function getStaticProps() {
   const playgrounds = getAllPlaygrounds();
