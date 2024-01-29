@@ -15,11 +15,8 @@ export default function Home() {
       />
 
       <div>
-        <div className="flex items-center justify-between">
-          <h2 className="text-[48px] font-semibold text-[#101828] mt-2">Services</h2>
-          <ContactUs />
-        </div>
-        <p className="text-[#7F8A99] font-medium mt-4">
+        <h2 className="text-[48px] font-semibold text-[#101828] mt-2">Services</h2>
+        <p className="text-[#7F8A99] font-medium mt-4 mb-4">
           Explore our latest insights on DevOps. Get practical tips on tools like Azure, Docker, and
           Kubernetes. <br /> Straightforward advice for your DevOps. Join us and make your DevOps
           journey better.

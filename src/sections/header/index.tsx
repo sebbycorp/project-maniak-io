@@ -4,6 +4,7 @@ import { Switch } from '@/components/ui/switch';
 import { Button } from '@/components/ui/button';
 import { Logo } from '@/components/ui/logo';
 import { LockIcon } from '@/components/ui/lock-icon';
+import { ContactUs } from '@/components/modals/contact-us';
 
 export function Header() {
   return (
@@ -31,9 +32,7 @@ export function Header() {
             <LockIcon />
             Log in
           </Button>
-          <Button className="bg-transparent border px-6 py-5 text-black border-[rgba(16, 24, 40, 0.20)]">
-            Sign up
-          </Button>
+          <ContactUs />
         </div>
       </div>
     </header>

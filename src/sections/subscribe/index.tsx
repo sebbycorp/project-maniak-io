@@ -3,7 +3,7 @@ import { Input } from '@/components/ui/input';
 
 export function Subscribe() {
   return (
-    <div className="py-12 bg-[#F9FAFB] w-screen">
+    <div className="py-24 bg-[#F9FAFB] w-screen">
       <h3 className="text-4xl text-center text-[#101828] font-semibold">
         Subscribe to my newsletter
       </h3>
@@ -13,8 +13,14 @@ export function Subscribe() {
         newsletter, and don`t miss out.
       </p>
       <div className="mx-auto flex justify-center gap-4">
-        <Input className="w-4xl w-[360px]" type="email" placeholder="Enter your email" />
-        <Button className="bg-[#2463EB]">Subscribe</Button>
+        <Input
+          className="w-[360px] h-[54px] text-base placeholder:text-base placeholder:tracking-[0.32px]"
+          type="email"
+          placeholder="Enter your email"
+        />
+        <Button className="bg-[#2463EB] px-6 h-[54px] text-normal font-semibold text-white">
+          Subscribe
+        </Button>
       </div>
     </div>
   );
