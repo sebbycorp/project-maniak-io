@@ -1,11 +1,11 @@
-import { BaseLayout } from '@/layouts/base-layout';
 import '@/styles/globals.css';
 import type { NextPage } from 'next';
+import { ThemeProvider as NextThemesProvider } from 'next-themes';
 import type { AppProps } from 'next/app';
 import React from 'react';
 import { Toaster } from 'sonner';
 
-import { ThemeProvider as NextThemesProvider } from 'next-themes';
+import { BaseLayout } from '@/layouts/base-layout';
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: React.ReactElement) => React.ReactNode;
