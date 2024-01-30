@@ -8,6 +8,9 @@ import type { AppProps } from 'next/app';
 import React from 'react';
 import { Toaster } from 'sonner';
 
+import { ThemeProvider as NextThemesProvider } from 'next-themes';
+import { type ThemeProviderProps } from 'next-themes/dist/types';
+
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: React.ReactElement) => React.ReactNode;
 };
@@ -22,9 +25,14 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
   const ComponentWithlayout = getLayout(<Component {...pageProps} />);
 
   return (
-    <React.Fragment>
+    <NextThemesProvider
+      attribute="class"
+      defaultTheme="system"
+      enableSystem
+      disableTransitionOnChange
+    >
       <Toaster />
       {ComponentWithlayout}
-    </React.Fragment>
+    </NextThemesProvider>
   );
 }

@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Logo } from '@/components/ui/logo';
 import { LockIcon } from '@/components/ui/lock-icon';
 import { ContactUs } from '@/components/modals/contact-us';
+import { ThemeSwitcher } from '@/components/theme-switcher';
 
 export function Header() {
   return (
@@ -26,7 +27,7 @@ export function Header() {
         </nav>
       </div>
       <div className="flex items-center gap-5">
-        <Switch />
+        <ThemeSwitcher />
         <div className="flex items-center gap-2">
           <Button className="flex gap-2 bg-transparent border border-transparent  text-[#2463EB] hover:border-gray-300">
             <LockIcon />
