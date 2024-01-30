@@ -1,10 +1,12 @@
-import { routes } from '@/constants/routes';
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import { Logo } from '@/components/ui/logo';
-import { LockIcon } from '@/components/ui/lock-icon';
+
 import { ContactUs } from '@/components/modals/contact-us';
 import { ThemeSwitcher } from '@/components/theme-switcher';
+import { Button } from '@/components/ui/button';
+import { LockIcon } from '@/components/ui/lock-icon';
+import { Logo } from '@/components/ui/logo';
+
+import { routes } from '@/constants/routes';
 
 export function Header() {
   return (

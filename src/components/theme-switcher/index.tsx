@@ -1,4 +1,5 @@
 import { useTheme } from 'next-themes';
+
 import { Switch } from '../ui/switch';
 
 export function ThemeSwitcher() {

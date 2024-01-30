@@ -1,6 +1,6 @@
-import { Linkedin } from '@/components/ui/social/linkedin';
 import { Facebook } from '@/components/ui/social/facebook';
 import { GitHub } from '@/components/ui/social/github';
+import { Linkedin } from '@/components/ui/social/linkedin';
 import { Twitter } from '@/components/ui/social/twitter';
 import { YouTube } from '@/components/ui/social/youtube';
 

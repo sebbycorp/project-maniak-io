@@ -1,11 +1,14 @@
-import { Breadcrumbs } from '@/components/ui/breadcrumbs';
-import { Button } from '@/components/ui/button';
-import { Playground, getPlaygroundData, getPlaygroundsFiles } from '@/helpers/playgrounds';
-import { SubscribeLayout } from '@/layouts/subscribe-layout';
 import { GetStaticPropsContext } from 'next';
 import { usePathname } from 'next/navigation';
 import { useRouter } from 'next/router';
 import Markdown from 'react-markdown';
+
+import { SubscribeLayout } from '@/layouts/subscribe-layout';
+
+import { Breadcrumbs } from '@/components/ui/breadcrumbs';
+import { Button } from '@/components/ui/button';
+
+import { Playground, getPlaygroundData, getPlaygroundsFiles } from '@/helpers/playgrounds';
 
 interface Params {
   slug: string;

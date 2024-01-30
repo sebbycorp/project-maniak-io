@@ -1,9 +1,10 @@
+import Image from 'next/image';
+
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { LinearGradient } from '@/components/ui/linear-gradient';
 
 import img from '/public/hero/hero.jpg';
-import Image from 'next/image';
 
 export function Hero() {
   return (

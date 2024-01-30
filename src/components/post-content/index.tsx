@@ -1,17 +1,18 @@
-import { Post } from '@/helpers/posts';
+import { CopyIcon } from '@radix-ui/react-icons';
+import { clsx } from 'clsx';
 import Image from 'next/image';
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
-import { LinearGradient } from '@/components/ui/linear-gradient';
-import { Badge } from '@/components/ui/badge';
-import { Avatar } from '@/components/ui/avatar';
-import { CopyIcon } from '@radix-ui/react-icons';
-
-import avatar from '/public/avatar/avatar.jpg';
 import { toast } from 'sonner';
 
+import { Avatar } from '@/components/ui/avatar';
+import { Badge } from '@/components/ui/badge';
+import { LinearGradient } from '@/components/ui/linear-gradient';
+
+import { Post } from '@/helpers/posts';
+
 import style from './markdown.module.css';
-import { clsx } from 'clsx';
+import avatar from '/public/avatar/avatar.jpg';
 
 export function PostContent({ post }: { post: Post }) {
   const { title, tags, date, content } = post;

@@ -1,6 +1,8 @@
-import { Card } from '@/components/ui/card';
-import { trustedBy } from '@/constants/trusted-by';
 import Image from 'next/image';
+
+import { Card } from '@/components/ui/card';
+
+import { trustedBy } from '@/constants/trusted-by';
 
 export function TrustedBy() {
   return (

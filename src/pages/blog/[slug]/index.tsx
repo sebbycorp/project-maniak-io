@@ -1,7 +1,10 @@
-import { PostContent } from '@/components/post-content';
-import { Post, getPostData, getPostsFiles } from '@/helpers/posts';
-import { PostLayout } from '@/layouts/post-layout';
 import { GetStaticPropsContext } from 'next';
+
+import { PostLayout } from '@/layouts/post-layout';
+
+import { PostContent } from '@/components/post-content';
+
+import { Post, getPostData, getPostsFiles } from '@/helpers/posts';
 
 interface Params {
   slug: string;

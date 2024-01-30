@@ -1,5 +1,7 @@
-import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 import { SubscribeLayout } from '@/layouts/subscribe-layout';
+
+import { Breadcrumbs } from '@/components/ui/breadcrumbs';
+
 import { ServicesCards } from '@/sections/services-cards';
 
 export default function Home() {

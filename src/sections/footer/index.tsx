@@ -1,8 +1,10 @@
-import { social } from '@/constants/social';
-import { Logo } from '@/components/ui/logo';
-import React from 'react';
-import { routes } from '@/constants/routes';
 import Link from 'next/link';
+import React from 'react';
+
+import { Logo } from '@/components/ui/logo';
+
+import { routes } from '@/constants/routes';
+import { social } from '@/constants/social';
 
 export function Footer() {
   return (
