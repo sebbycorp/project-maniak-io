@@ -11,6 +11,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
+import Markdown from 'react-markdown';
 
 interface Params {
   slug: string;
@@ -33,12 +34,12 @@ export default function PlaygroundPreview({ playground }: { playground: Playgrou
       />
       <div>
         <h2 className="text-[48px] font-semibold text-[#101828] mt-2">{playground.title}</h2>
-        <p className="text-[#7F8A99] font-medium mt-4">{playground.description}</p>
+        <p className="text-[#7F8A99] font-medium mt-4 mb-8">{playground.description}</p>
         <Button className="bg-[#2463EB]" onClick={() => router.push(pathname + '/' + 'playground')}>
           Start Playground
         </Button>
       </div>
-      {playground.previewContent}
+      <Markdown>{playground.previewContent}</Markdown>
     </div>
   );
 }

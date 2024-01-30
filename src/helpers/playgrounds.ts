@@ -27,18 +27,9 @@ export function getPlaygroundData(postIdentifier: string) {
   const fileContent = fs.readFileSync(filePath, 'utf-8');
   const { data, content } = matter(fileContent);
 
-  const regex = /~~~\s*([\s\S]*?)\s*~~~/g;
-
-  const sections = Array.from(content.split(regex));
-
-  const previewContent = sections.length > 1 ? sections[1] : null;
-  const mainContent = sections.length > 1 ? sections[2] : content;
-
   const playgroundData = {
     slug: postSlug,
-    sections,
-    content: mainContent,
-    previewContent: previewContent,
+    content,
     ...(data as PlaygroundData),
   };
 
