@@ -76,7 +76,7 @@ export default function Blog({ posts }: { posts: Post[] }) {
               </div>
             ) : null}
             <h3 className="text-2xl mt-3 text-[#101828] max-w-80 tracking-[0.48px] font-semibold bloc">
-              <div className="line-clamp-2">{el.title}</div>
+              <div className="line-clamp-2 max-sm:line-clamp-3">{el.title}</div>
             </h3>
 
             <p className="mt-4 mb-8 text-[#7F8A99] tracking-[0.32px] font-medium">
