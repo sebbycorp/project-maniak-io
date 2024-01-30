@@ -63,7 +63,7 @@ export default function Blog({ posts }: { posts: Post[] }) {
           journey better.
         </p>
       </div>
-      <div className="grid grid-cols-3 gap-8 mt-20 mb-14">
+      <div className="grid grid-cols-3 gap-8 mt-20 mb-14 max-lg:gap-4 max-md:grid-cols-2 max-sm:grid-cols-1">
         {paginatedPosts.map((el, i) => (
           <Card className="flex flex-col items-start" key={i}>
             {el.tags ? (
