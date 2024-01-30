@@ -19,11 +19,11 @@
 }
 
 .markdown pre {
-  @apply my-4;
+  @apply my-4 max-sm:max-w-full;
 }
 
 .markdown pre p {
-  @apply text-[#175CD3];
+  @apply text-[#175CD3] max-sm:text-sm;
 }
 
 .markdown li {

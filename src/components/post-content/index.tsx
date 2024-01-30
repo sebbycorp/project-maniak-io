@@ -64,7 +64,7 @@ export function PostContent({ post }: { post: Post }) {
 
                 return (
                   <div className="relative border rounded-lg border-[#EAECF0] bg-[#F9FAFB] py-0 px-4">
-                    <p className="text-[#175CD3] py-4 max-w-[98%]">{children}</p>
+                    <p className="text-[#175CD3] py-4 max-w-[95%]">{children}</p>
                     <CopyIcon
                       className="absolute top-7 right-5 cursor-pointer"
                       onClick={() => {
