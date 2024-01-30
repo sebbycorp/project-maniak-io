@@ -92,7 +92,7 @@ const data = [
 
 export function ServicesCards() {
   return (
-    <div className="mt-8 grid grid-cols-2 gap-6">
+    <div className="mt-8 grid grid-cols-2 gap-8 max-lg:gap-4 max-md:grid-cols-1">
       {data.map((el, i) => (
         <Card className="flex flex-col items-start" key={i}>
           <div className="bg-[#2463eb1a] inline-block p-3 rounded-lg mb-4">{el.icon}</div>
