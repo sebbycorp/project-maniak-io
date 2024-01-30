@@ -7,7 +7,7 @@ import { Subscribe } from '@/sections/subscribe';
 export function SubscribeLayout({ children }: { children: React.ReactNode }) {
   return (
     <React.Fragment>
-      <div className="container px-8">
+      <div className="container">
         <Header />
         {children}
       </div>

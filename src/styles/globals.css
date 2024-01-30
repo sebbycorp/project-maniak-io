@@ -81,6 +81,6 @@
 
 @layer components {
   .container {
-    @apply w-full max-w-7xl px-8 mx-auto;
+    @apply w-full max-w-7xl px-8 max-sm:px-4 mx-auto;
   }
 }

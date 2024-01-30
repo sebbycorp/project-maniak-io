@@ -6,7 +6,7 @@ import { Header } from '@/sections/header';
 export function BaseLayout({ children }: { children: React.ReactNode }) {
   return (
     <React.Fragment>
-      <div className="container px-8">
+      <div className="container">
         <Header />
         {children}
       </div>
