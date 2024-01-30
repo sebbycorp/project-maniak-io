@@ -26,9 +26,9 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
 
   return (
     <NextThemesProvider
-      attribute="class"
-      defaultTheme="system"
-      enableSystem
+      // attribute="class"
+      // defaultTheme="light"
+      // enableSystem
       disableTransitionOnChange
     >
       <Toaster />
