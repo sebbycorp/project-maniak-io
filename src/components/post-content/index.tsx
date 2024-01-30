@@ -1,13 +1,10 @@
 import { Post } from '@/helpers/posts';
-import { Link } from 'lucide-react';
 import Image from 'next/image';
 import React from 'react';
-import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import ReactMarkdown, { Components } from 'react-markdown';
+import ReactMarkdown from 'react-markdown';
 import { LinearGradient } from '@/components/ui/linear-gradient';
 import { Badge } from '@/components/ui/badge';
-import { Avatar, AvatarImage } from '@/components/ui/avatar';
+import { Avatar } from '@/components/ui/avatar';
 import { CopyIcon } from '@radix-ui/react-icons';
 
 import avatar from '/public/avatar/avatar.jpg';

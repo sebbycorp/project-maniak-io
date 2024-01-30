@@ -1,6 +1,5 @@
 import { routes } from '@/constants/routes';
 import Link from 'next/link';
-import { Switch } from '@/components/ui/switch';
 import { Button } from '@/components/ui/button';
 import { Logo } from '@/components/ui/logo';
 import { LockIcon } from '@/components/ui/lock-icon';

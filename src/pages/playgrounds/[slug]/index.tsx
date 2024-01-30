@@ -1,16 +1,10 @@
-import { PostContent } from '@/components/post-content';
 import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 import { Button } from '@/components/ui/button';
 import { Playground, getPlaygroundData, getPlaygroundsFiles } from '@/helpers/playgrounds';
-import { Post, getPostData, getPostsFiles } from '@/helpers/posts';
-import { PostLayout } from '@/layouts/post-layout';
 import { SubscribeLayout } from '@/layouts/subscribe-layout';
-import { atom, useSetAtom } from 'jotai';
 import { GetStaticPropsContext } from 'next';
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useRouter } from 'next/router';
-import { useEffect } from 'react';
 import Markdown from 'react-markdown';
 
 interface Params {
@@ -20,8 +14,6 @@ interface Params {
 export default function PlaygroundPreview({ playground }: { playground: Playground }) {
   const pathname = usePathname();
   const router = useRouter();
-
-  console.log(playground);
 
   return (
     <div className="my-16">

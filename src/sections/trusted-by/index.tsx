@@ -1,4 +1,4 @@
-import { Card, CardContent } from '@/components/ui/card';
+import { Card } from '@/components/ui/card';
 import { trustedBy } from '@/constants/trusted-by';
 import Image from 'next/image';
 

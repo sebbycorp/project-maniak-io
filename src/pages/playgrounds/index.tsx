@@ -4,8 +4,7 @@ import { Card } from '@/components/ui/card';
 import { Playground, getAllPlaygrounds } from '@/helpers/playgrounds';
 import { SubscribeLayout } from '@/layouts/subscribe-layout';
 import clsx from 'clsx';
-import Link from 'next/link';
-import { useParams, usePathname, useSearchParams } from 'next/navigation';
+import { usePathname, useSearchParams } from 'next/navigation';
 import { useRouter } from 'next/router';
 
 export default function Playgrounds({ playgrounds }: { playgrounds: Playground[] }) {

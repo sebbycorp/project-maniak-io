@@ -1,4 +1,3 @@
-import { LinearGradient } from '@/components/ui/linear-gradient';
 import { Footer } from '@/sections/footer';
 import { Header } from '@/sections/header';
 import { Subscribe } from '@/sections/subscribe';

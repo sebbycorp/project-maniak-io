@@ -1,15 +1,6 @@
-import { PostContent } from '@/components/post-content';
-import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 import { Playground, getPlaygroundData, getPlaygroundsFiles } from '@/helpers/playgrounds';
-import { Post, getPostData, getPostsFiles } from '@/helpers/posts';
 import { BaseLayout } from '@/layouts/base-layout';
-import { PostLayout } from '@/layouts/post-layout';
-import { SubscribeLayout } from '@/layouts/subscribe-layout';
-import { atom, useSetAtom } from 'jotai';
 import { GetStaticPropsContext } from 'next';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { useEffect } from 'react';
 
 interface Params {
   slug: string;
