@@ -1,0 +1,35 @@
+.markdown p {
+  @apply text-[#7F8A99]   tracking-[0.4px] my-2;
+}
+
+.markdown img {
+  @apply border rounded-xl border-[#EAECF0];
+}
+
+.markdown h2 {
+  @apply text-3xl tracking-[0.6px] font-semibold text-[#101828] my-4;
+}
+
+.markdown h3 {
+  @apply text-2xl tracking-[0.48px] font-semibold text-[#101828] my-4;
+}
+
+.markdown h4 {
+  @apply text-xl tracking-[0.48px] font-semibold text-[#101828] my-4;
+}
+
+.markdown pre {
+  @apply my-4;
+}
+
+.markdown pre p {
+  @apply text-[#175CD3];
+}
+
+.markdown li {
+  @apply text-[#7F8A99];
+}
+
+.markdown a {
+  @apply text-[#2463EB] underline underline-offset-2;
+}

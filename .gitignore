@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+.eslintcache
 
 # testing
 /coverage
@@ -18,7 +19,6 @@
 # misc
 .DS_Store
 *.pem
-*.tgz
 
 # debug
 npm-debug.log*
@@ -28,9 +28,8 @@ yarn-error.log*
 # local env files
 .env*.local
 
-# ampt
-.ampt
-/static
+# vercel
+.vercel
 
 # typescript
 *.tsbuildinfo
