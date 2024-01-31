@@ -1,6 +1,7 @@
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { LinearGradient } from '@/components/ui/linear-gradient';
+import { useRouter } from 'next/router'; // Import the useRouter hook from Next.js
 
 import img from '/public/hero/hero.jpg';
 import Image from 'next/image';
