@@ -1,3 +1,6 @@
+import { HTMLProps } from 'react';
+import { twMerge } from 'tailwind-merge';
+
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
 import {
@@ -11,11 +14,11 @@ import {
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 
-export function ContactUs() {
+export function ContactUs({ className }: HTMLProps<HTMLDivElement>) {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button className="bg-[#155EEF]">Contact us</Button>
+        <Button className={twMerge('bg-[#155EEF]', className)}>Contact us</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
