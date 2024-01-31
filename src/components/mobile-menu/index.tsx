@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { useState } from 'react';
 
 import { LoginButton } from '@/components/login-button';
 import { ContactUs } from '@/components/modals/contact-us';
@@ -6,14 +7,23 @@ import { ThemeSwitcher } from '@/components/theme-switcher';
 import { Button } from '@/components/ui/button';
 import { Logo } from '@/components/ui/logo';
 import { Separator } from '@/components/ui/separator';
-import { Sheet, SheetContent, SheetFooter, SheetHeader, SheetTrigger } from '@/components/ui/sheet';
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetFooter,
+  SheetHeader,
+  SheetTrigger,
+} from '@/components/ui/sheet';
 
 import { routes } from '@/constants/routes';
 
 export function MobileMenu() {
+  const [open, setOpen] = useState(false);
+
   return (
     <div className="hidden max-md:block">
-      <Sheet>
+      <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger asChild>
           <div className="cursor-pointer p-2 flex items-center">
             <svg
@@ -46,8 +56,9 @@ export function MobileMenu() {
               {routes.map((route) => (
                 <Link
                   className="text-[#7F8A99] hover:text-[#ccc] transition-colors text-lg"
-                  key={route.name}
                   href={route.url}
+                  key={route.name}
+                  onClick={() => setOpen(false)}
                 >
                   {route.name}
                 </Link>
