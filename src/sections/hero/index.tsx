@@ -20,10 +20,7 @@ export function Hero() {
           Follow me for daily updates and code examples. Follow me for daily updates and code
           examples.
         </p>
-        <Button
-          className="mt-10 px-10 py-4 shadow-md bg-[#2463EB] text-lg rounded-lg h-14"
-          onClick={handleClick}
-        >
+        <Button className="mt-10 px-10 py-4 shadow-md bg-[#2463EB] text-lg rounded-lg h-14">
           Get Started
         </Button>
       </div>
