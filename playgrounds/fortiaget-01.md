@@ -1,6 +1,6 @@
 ---
-title: 'contaiNERD CTL'
-description: 'nerdctl + containerd + BuildKit for true nerds... Starts instantly. No paywall.'
+title: 'Fortigate'
+description: 'Fortigate automation'
 category: 'Containers'
 ---
 
