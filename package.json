@@ -53,7 +53,7 @@
   },
   "ampt": {
     "app": "project-maniak-io",
-    "runtime": "nodejs18",
+    "runtime": "nodejs20",
     "org": "maniak"
   },
   "devDependencies": {
