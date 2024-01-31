@@ -6,6 +6,12 @@ import img from '/public/hero/hero.jpg';
 import Image from 'next/image';
 
 export function Hero() {
+  const router = useRouter(); // Initialize the router
+
+  // Function to handle click event and redirect to '/playgrounds'
+  const handleClick = () => {
+    router.push('/playgrounds');
+  };
   return (
     <div className="h-[800px] relative flex gap-[64px] items-center">
       <div>
@@ -20,7 +26,10 @@ export function Hero() {
           Follow me for daily updates and code examples. Follow me for daily updates and code
           examples.
         </p>
-        <Button className="mt-10 px-10 py-4 shadow-md bg-[#2463EB] text-lg rounded-lg h-14">
+        <Button
+          className="mt-10 px-10 py-4 shadow-md bg-[#2463EB] text-lg rounded-lg h-14"
+          onClick={handleClick}
+        >
           Get Started
         </Button>
       </div>
