@@ -11,7 +11,6 @@ type PlaygroundData = {
 export type Playground = PlaygroundData & {
   slug: string;
   content: string;
-  previewContent: string | null;
 };
 
 const postsDirectory = path.join(process.cwd(), 'playgrounds');

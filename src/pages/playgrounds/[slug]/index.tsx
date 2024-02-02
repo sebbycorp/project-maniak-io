@@ -30,11 +30,11 @@ export default function PlaygroundPreview({ playground }: { playground: Playgrou
       <div>
         <h2 className="text-[48px] font-semibold text-[#101828] mt-2">{playground.title}</h2>
         <p className="text-[#7F8A99] font-medium mt-4 mb-8">{playground.description}</p>
-        <Button className="bg-[#2463EB]" onClick={() => router.push(pathname + '/' + 'playground')}>
+        <Button className="bg-[#2463EB]" onClick={() => {}}>
           Start Playground
         </Button>
       </div>
-      <Markdown>{playground.previewContent}</Markdown>
+      <Markdown>{playground.content}</Markdown>
     </div>
   );
 }

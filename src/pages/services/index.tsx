@@ -25,7 +25,7 @@ export default function Home() {
         </p>
       </div>
       <ServicesCards />
-      <Alert className="mt-8 flex items-center justify-between p-16 border-[#2463EB] bg-[#2463EB] text-white">
+      <Alert className="mt-8 flex items-center justify-between p-16 border-[#2463EB] bg-[#2463EB] text-white max-md:flex-col max-md:gap-4 max-md:items-start max-md:px-6 max-md:py-8">
         <AlertDescription className="text-2xl">
           We are always in touch, ready to help you <br /> and answer all your questions.
         </AlertDescription>
