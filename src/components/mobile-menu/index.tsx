@@ -1,3 +1,4 @@
+import { useTheme } from 'next-themes';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -12,6 +13,9 @@ import { routes } from '@/constants/routes';
 
 export function MobileMenu() {
   const [open, setOpen] = useState(false);
+  const { theme } = useTheme();
+
+  const fillColor = theme === 'dark' ? 'white' : 'black';
 
   return (
     <div className="hidden max-md:block">
@@ -27,7 +31,7 @@ export function MobileMenu() {
             >
               <path
                 d="M3 12H21M3 6H21M3 18H21"
-                stroke="#101828"
+                stroke={fillColor}
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
