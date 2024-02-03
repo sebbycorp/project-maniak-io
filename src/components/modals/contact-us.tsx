@@ -18,7 +18,13 @@ export function ContactUs({ className }: HTMLProps<HTMLDivElement>) {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline" className={twMerge('bg-[#155EEF] text-white', className)}>
+        <Button
+          variant="outline"
+          className={twMerge(
+            'bg-[#155EEF] hover:bg-[#155EEF] text-white hover:text-white',
+            className,
+          )}
+        >
           Contact us
         </Button>
       </DialogTrigger>

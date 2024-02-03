@@ -8,7 +8,7 @@ import img from '/public/hero/hero.jpg';
 
 export function Hero() {
   return (
-    <div className="py-32 relative flex gap-[64px] items-center max-md:flex-col max-md:pt-12">
+    <div className="py-32 relative flex gap-[64px] items-center max-md:flex-col max-md:pt-12 max-sm:pb-12">
       <div>
         <Badge className="mb-2">Technology Evangelist | Advisor | Consultant</Badge>
         <h2 className="text-[#101828] text-5xl tracking-[0.96px] text-balance leading-[60px] max-md:text-2">

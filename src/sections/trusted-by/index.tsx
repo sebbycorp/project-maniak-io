@@ -6,7 +6,7 @@ import { trustedBy } from '@/constants/trusted-by';
 
 export function TrustedBy() {
   return (
-    <div className="py-24 max-md:pt-4">
+    <div className="mt-12 mb-24 max-md:pt-4">
       <h2 className="text-4xl font-semibold mb-5">Devops&Cloud Playgrounds</h2>
       <p className="text-xl text-[#7F8A99] tracking-[0.4px]">
         Powerful, self-serve product and growth analytics to help you convert, engage, and retain
@@ -21,7 +21,7 @@ export function TrustedBy() {
             <Image
               src={el}
               alt="Card Image"
-              className=" object-contain max-h-[140px] max-sm:max-w-[140px] max-sm:max-w-full"
+              className="object-contain max-h-[140px] max-sm:max-w-[140px] max-sm:max-w-full"
             />
           </Card>
         ))}
