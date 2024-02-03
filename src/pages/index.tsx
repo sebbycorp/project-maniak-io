@@ -17,7 +17,7 @@ export default function Home({ playground }: { playground: Playground }) {
 }
 
 export function getServerSideProps(context: GetStaticPropsContext) {
-  const playgroundData = getPlaygroundData('node-js');
+  const playgroundData = getPlaygroundData('docker');
 
   return {
     props: {

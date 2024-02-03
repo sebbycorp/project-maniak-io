@@ -53,10 +53,10 @@ export default function Playgrounds({ playgrounds }: { playgrounds: Playground[]
       </div>
 
       <div className="my-7">
-        <div className="flex gap-6 max-sm:flex-col-reverse">
-          <div className="grid grid-cols-2 gap-4 max-sm:grid-cols-1">
+        <div className="flex gap-6 max-md:flex-col-reverse">
+          <div className="grid grid-cols-2 gap-4 max-md:grid-cols-1">
             {filteredPlaygrounds.map((el, i) => (
-              <Card className="max-w-[424px] min-w-full" key={i}>
+              <Card className="w-[424px] max-w-full max-md:w-full" key={i}>
                 <h3 className="text-2xl mt-3 text-[#101828] max-w-80 tracking-[0.48px] font-semibold bloc">
                   <div className="line-clamp-1">{el.title}</div>
                 </h3>
@@ -74,7 +74,7 @@ export default function Playgrounds({ playgrounds }: { playgrounds: Playground[]
               </Card>
             ))}
           </div>
-          <div className="flex flex-col items-start gap-1 w-72 max-w-full ml-auto max-sm:ml-0">
+          <div className="flex flex-col items-start gap-1 w-72 max-w-full ml-auto max-md:ml-0">
             <p className="mb-5 text-sm text-[#004EEB]">Categories</p>
             <Button
               className={clsx(
