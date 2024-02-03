@@ -1,6 +1,6 @@
 ---
-title: 'Docker'
-description: 'A Linux server with Docker engine pre-installed. Starts instantly. No paywall.'
+title: 'Docker Compose Learning '
+description: 'Docker Compose leanring'
 category: 'Containers'
 terminal: 'https://localhost:8000'
 ---
