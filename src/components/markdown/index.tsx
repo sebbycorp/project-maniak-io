@@ -2,7 +2,7 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { toast } from 'sonner';
 
-import { CopyIcon } from '../ui/copy-icon';
+import { CopyIcon } from '@/components/ui/copy-icon';
 
 export function Markdown({ children }: { children: string }) {
   return (

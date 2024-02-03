@@ -1,8 +1,8 @@
 import { HTMLProps } from 'react';
 import { twMerge } from 'tailwind-merge';
 
-import { Button } from '../ui/button';
-import { LockIcon } from '../ui/lock-icon';
+import { Button } from '@/components/ui/button';
+import { LockIcon } from '@/components/ui/lock-icon';
 
 export function LoginButton({ className }: HTMLProps<HTMLButtonElement>) {
   return (

@@ -4,17 +4,9 @@ import { useState } from 'react';
 import { LoginButton } from '@/components/login-button';
 import { ContactUs } from '@/components/modals/contact-us';
 import { ThemeSwitcher } from '@/components/theme-switcher';
-import { Button } from '@/components/ui/button';
 import { Logo } from '@/components/ui/logo';
 import { Separator } from '@/components/ui/separator';
-import {
-  Sheet,
-  SheetClose,
-  SheetContent,
-  SheetFooter,
-  SheetHeader,
-  SheetTrigger,
-} from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetFooter, SheetHeader, SheetTrigger } from '@/components/ui/sheet';
 
 import { routes } from '@/constants/routes';
 

@@ -1,17 +1,14 @@
-import { CopyIcon } from '@radix-ui/react-icons';
 import { clsx } from 'clsx';
 import Image from 'next/image';
 import React from 'react';
-import ReactMarkdown from 'react-markdown';
-import { toast } from 'sonner';
 
+import { Markdown } from '@/components/markdown';
 import { Avatar } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
 import { LinearGradient } from '@/components/ui/linear-gradient';
 
 import { Post } from '@/helpers/posts';
 
-import { Markdown } from '../markdown';
 import avatar from '/public/avatar/avatar.jpg';
 
 export function PostContent({ post }: { post: Post }) {

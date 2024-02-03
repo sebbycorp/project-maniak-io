@@ -1,4 +1,3 @@
-import { ContactUs } from '@/components/modals/contact-us';
 import { Card } from '@/components/ui/card';
 
 const data = [

@@ -4,8 +4,6 @@ import { LoginButton } from '@/components/login-button';
 import { MobileMenu } from '@/components/mobile-menu';
 import { ContactUs } from '@/components/modals/contact-us';
 import { ThemeSwitcher } from '@/components/theme-switcher';
-import { Button } from '@/components/ui/button';
-import { LockIcon } from '@/components/ui/lock-icon';
 import { Logo } from '@/components/ui/logo';
 import { Separator } from '@/components/ui/separator';
 
