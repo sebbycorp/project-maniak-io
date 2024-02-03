@@ -1,3 +1,10 @@
+import Link from 'next/link';
+import { usePathname, useSearchParams } from 'next/navigation';
+import { useRouter } from 'next/router';
+import { useCallback } from 'react';
+
+import { SubscribeLayout } from '@/layouts/subscribe-layout';
+
 import { Badge } from '@/components/ui/badge';
 import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 import { Card } from '@/components/ui/card';
@@ -8,12 +15,8 @@ import {
   PaginationLink,
 } from '@/components/ui/pagination';
 import { Separator } from '@/components/ui/separator';
-import { getAllPosts, Post } from '@/helpers/posts';
-import { SubscribeLayout } from '@/layouts/subscribe-layout';
-import Link from 'next/link';
-import { usePathname, useSearchParams } from 'next/navigation';
-import { useRouter } from 'next/router';
-import { useCallback } from 'react';
+
+import { Post, getAllPosts } from '@/helpers/posts';
 
 export default function Blog({ posts }: { posts: Post[] }) {
   const router = useRouter();
@@ -60,7 +63,7 @@ export default function Blog({ posts }: { posts: Post[] }) {
           journey better.
         </p>
       </div>
-      <div className="grid grid-cols-3 gap-8 mt-20 mb-14">
+      <div className="grid grid-cols-3 gap-8 mt-20 max-sm:mt-8 mb-14 max-lg:gap-4 max-md:grid-cols-2 max-sm:grid-cols-1">
         {paginatedPosts.map((el, i) => (
           <Card className="flex flex-col items-start" key={i}>
             {el.tags ? (
@@ -73,7 +76,7 @@ export default function Blog({ posts }: { posts: Post[] }) {
               </div>
             ) : null}
             <h3 className="text-2xl mt-3 text-[#101828] max-w-80 tracking-[0.48px] font-semibold bloc">
-              <div className="line-clamp-2">{el.title}</div>
+              <div className="line-clamp-2 max-sm:line-clamp-3">{el.title}</div>
             </h3>
 
             <p className="mt-4 mb-8 text-[#7F8A99] tracking-[0.32px] font-medium">

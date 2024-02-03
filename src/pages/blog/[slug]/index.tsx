@@ -1,10 +1,10 @@
-import { PostContent } from '@/components/post-content';
-import { Post, getPostData, getPostsFiles } from '@/helpers/posts';
-import { PostLayout } from '@/layouts/post-layout';
-import { SubscribeLayout } from '@/layouts/subscribe-layout';
-import { atom, useSetAtom } from 'jotai';
 import { GetStaticPropsContext } from 'next';
-import { useEffect } from 'react';
+
+import { PostLayout } from '@/layouts/post-layout';
+
+import { PostContent } from '@/components/post-content';
+
+import { Post, getPostData, getPostsFiles } from '@/helpers/posts';
 
 interface Params {
   slug: string;

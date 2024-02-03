@@ -7,6 +7,7 @@ export function Logo({ variant = 'dark' }: LogoProps) {
 
   return (
     <svg
+      className="max-w-full"
       width="191"
       height="40"
       viewBox="0 0 191 40"

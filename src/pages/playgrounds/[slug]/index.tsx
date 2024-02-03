@@ -1,27 +1,16 @@
-import { PostContent } from '@/components/post-content';
-import { Breadcrumbs } from '@/components/ui/breadcrumbs';
-import { Button } from '@/components/ui/button';
-import { Playground, getPlaygroundData, getPlaygroundsFiles } from '@/helpers/playgrounds';
-import { Post, getPostData, getPostsFiles } from '@/helpers/posts';
-import { PostLayout } from '@/layouts/post-layout';
-import { SubscribeLayout } from '@/layouts/subscribe-layout';
-import { atom, useSetAtom } from 'jotai';
 import { GetStaticPropsContext } from 'next';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { useRouter } from 'next/router';
-import { useEffect } from 'react';
+import React from 'react';
+
+import { PlaygroundContent } from '@/components/playground-content';
+import { Breadcrumbs } from '@/components/ui/breadcrumbs';
+
+import { Playground, getPlaygroundData, getPlaygroundsFiles } from '@/helpers/playgrounds';
 
 interface Params {
   slug: string;
 }
 
-export default function PlaygroundPreview({ playground }: { playground: Playground }) {
-  const pathname = usePathname();
-  const router = useRouter();
-
-  console.log(playground);
-
+export default function PlaygroundPage({ playground }: { playground: Playground }) {
   return (
     <div className="my-16">
       <Breadcrumbs
@@ -32,20 +21,11 @@ export default function PlaygroundPreview({ playground }: { playground: Playgrou
         ]}
       />
       <div>
-        <h2 className="text-[48px] font-semibold text-[#101828] mt-2">{playground.title}</h2>
-        <p className="text-[#7F8A99] font-medium mt-4">{playground.description}</p>
-        <Button className="bg-[#2463EB]" onClick={() => router.push(pathname + '/' + 'playground')}>
-          Start Playground
-        </Button>
+        <PlaygroundContent playground={playground} />
       </div>
-      {playground.previewContent}
     </div>
   );
 }
-
-PlaygroundPreview.getLayout = function getLayout(page: React.ReactNode) {
-  return <SubscribeLayout>{page}</SubscribeLayout>;
-};
 
 export function getStaticProps(context: GetStaticPropsContext) {
   const { params } = context;
