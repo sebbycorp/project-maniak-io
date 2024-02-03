@@ -97,7 +97,7 @@ export function ServicesCards() {
         <Card className="flex flex-col items-start" key={i}>
           <div className="bg-[#2463eb1a] inline-block p-3 rounded-lg mb-4">{el.icon}</div>
           <h4 className="mt-2 mb-4 text-2xl font-semibold">{el.title}</h4>
-          <p className="text-lg text-[#7F8A99] mb-6">{el.description}</p>
+          <p className="text-lg text-primary mb-6">{el.description}</p>
         </Card>
       ))}
     </div>

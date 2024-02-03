@@ -1,9 +1,12 @@
+import { useTheme } from 'next-themes';
+
 type LogoProps = {
   variant?: 'dark' | 'light';
 };
 
 export function Logo({ variant = 'dark' }: LogoProps) {
-  const fillColor = variant === 'dark' ? '#000' : '#fff';
+  const { theme } = useTheme();
+  const fillColor = variant === 'dark' && theme !== 'dark' ? '#000' : '#fff';
 
   return (
     <svg

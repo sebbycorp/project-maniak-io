@@ -37,14 +37,14 @@ export function PlaygroundContent({ playground, isMainPage = false }: Playground
             <h3
               className={clsx(
                 twMerge(
-                  'text-[48px] font-semibold text-[#101828] mt-2',
+                  'text-[48px] font-semibold text-primary-title mt-2',
                   isMainPage && 'text-[24px]',
                 ),
               )}
             >
               {playground.title}
             </h3>
-            <p className="text-[#7F8A99] font-medium mt-4 mb-4">{playground.description}</p>
+            <p className="text-primary font-medium mt-4 mb-4">{playground.description}</p>
             <Markdown>{playground.content}</Markdown>
           </div>
           <div>
@@ -64,23 +64,23 @@ export function PlaygroundContent({ playground, isMainPage = false }: Playground
                 <h3
                   className={clsx(
                     twMerge(
-                      'text-[48px] font-semibold text-[#101828] mt-2',
+                      'text-[48px] font-semibold text-primary-title mt-2',
                       isMainPage && 'text-[24px]',
                     ),
                   )}
                 >
                   {playground.title}
                 </h3>
-                <p className="text-[#7F8A99] font-medium mt-4 mb-4">{playground.description}</p>
+                <p className="text-primary font-medium mt-4 mb-4">{playground.description}</p>
                 {!open ? (
                   <Button
-                    className="bg-[#2463EB] mb-6"
+                    className="bg-primary-action text-white mb-6"
                     onClick={() => {
                       setOpen(true);
                       toast({
                         // @ts-ignore
                         title: (
-                          <div className="flex items-center text-[#2463EB] font-semibold text-base gap-2 mb-2">
+                          <div className="flex items-center text-primary-action font-semibold text-base gap-2 mb-2">
                             <svg
                               width="20"
                               height="20"

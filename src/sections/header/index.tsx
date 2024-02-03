@@ -22,7 +22,7 @@ export function Header() {
         <nav className="flex gap-8 items-center max-lg:gap-4 max-md:hidden">
           {routes.map((route) => (
             <Link
-              className="text-[#7F8A99] hover:text-[#ccc] transition-colors"
+              className="text-primary hover:text-[#ccc] transition-colors"
               key={route.name}
               href={route.url}
             >

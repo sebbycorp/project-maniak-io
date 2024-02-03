@@ -38,10 +38,10 @@ export function Breadcrumbs({ items }: BreadcrumbsProps) {
               {item.url ? (
                 <Link
                   href={item.url}
-                  className={`ms-1 text-sm font-medium text-[#155EEF] underline underline-offset-2 ${
+                  className={`ms-1 text-sm font-medium text-primary-link underline underline-offset-2 ${
                     item.isCurrentPage
                       ? 'text-gray-500'
-                      : 'hover:text-blue-600 md:ms-2 dark:text-gray-400 dark:hover:text-white'
+                      : 'hover:text-primary-link md:ms-2 dark:text-primary-link dark:hover:text-white'
                   }`}
                 >
                   {item.title}
@@ -51,7 +51,7 @@ export function Breadcrumbs({ items }: BreadcrumbsProps) {
                   className={`ms-1 text-sm font-medium ${
                     item.isCurrentPage
                       ? 'text-gray-500'
-                      : 'text-gray-700 hover:text-blue-600 md:ms-2 dark:text-gray-400 dark:hover:text-white'
+                      : 'text-gray-700 hover:text-primary-link md:ms-2 dark:text-gray-400 dark:hover:text-white'
                   }`}
                 >
                   {item.title}

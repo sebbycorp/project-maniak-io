@@ -8,7 +8,7 @@ export function TrustedBy() {
   return (
     <div className="mt-12 mb-24 max-md:pt-4">
       <h2 className="text-4xl font-semibold mb-5">Devops&Cloud Playgrounds</h2>
-      <p className="text-xl text-[#7F8A99] tracking-[0.4px]">
+      <p className="text-xl text-primary tracking-[0.4px]">
         Powerful, self-serve product and growth analytics to help you convert, engage, and retain
         more users. Trusted by over 4,000 startups.
       </p>

@@ -55,7 +55,7 @@ export function MobileMenu() {
             <ul className="flex flex-col gap-6">
               {routes.map((route) => (
                 <Link
-                  className="text-[#7F8A99] hover:text-[#ccc] transition-colors text-lg"
+                  className="text-primary hover:text-[#ccc] transition-colors text-lg"
                   href={route.url}
                   key={route.name}
                   onClick={() => setOpen(false)}
