@@ -21,7 +21,7 @@ export function Hero() {
           Follow me for daily updates and code examples. Follow me for daily updates and code
           examples.
         </p>
-        <Button className="mt-10 px-10 py-4 shadow-md bg-primary-action text-lg rounded-lg h-14">
+        <Button className="mt-10 px-10 py-4 shadow-md bg-primary-action text-lg text-white rounded-lg h-14">
           Get Started
         </Button>
       </div>
