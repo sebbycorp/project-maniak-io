@@ -6,6 +6,7 @@ type PlaygroundData = {
   title: string;
   description: string;
   category: string;
+  terminal: string;
 };
 
 export type Playground = PlaygroundData & {

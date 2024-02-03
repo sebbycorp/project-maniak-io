@@ -11,7 +11,7 @@ import { LinearGradient } from '@/components/ui/linear-gradient';
 
 import { Post } from '@/helpers/posts';
 
-import style from './markdown.module.css';
+import { Markdown } from '../markdown';
 import avatar from '/public/avatar/avatar.jpg';
 
 export function PostContent({ post }: { post: Post }) {
@@ -54,32 +54,7 @@ export function PostContent({ post }: { post: Post }) {
       </div>
       <div>
         <article className={clsx(content && 'py-24 max-sm:py-12', 'container', 'max-w-3xl')}>
-          <ReactMarkdown
-            components={{
-              h1: 'h2',
-              h5: 'h4',
-              h6: 'h4',
-              code(props) {
-                const { children } = props;
-
-                return (
-                  <div className="relative border rounded-lg border-[#EAECF0] bg-[#F9FAFB] py-0 px-4">
-                    <p className="text-[#175CD3] py-4 max-w-[95%]">{children}</p>
-                    <CopyIcon
-                      className="absolute top-7 right-5 cursor-pointer"
-                      onClick={() => {
-                        navigator.clipboard.writeText(children as string);
-                        toast.success('Code copied successfully!');
-                      }}
-                    />
-                  </div>
-                );
-              },
-            }}
-            className={style.markdown}
-          >
-            {content}
-          </ReactMarkdown>
+          <Markdown>{content}</Markdown>
         </article>
         <hr />
       </div>
