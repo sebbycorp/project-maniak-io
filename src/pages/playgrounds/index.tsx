@@ -76,7 +76,7 @@ export default function Playgrounds({ playgrounds }: { playgrounds: Playground[]
             <p className="mb-5 text-sm text-[#004EEB]">Categories</p>
             <Button
               className={clsx(
-                'flex w-full  justify-start text-white',
+                'flex w-full  justify-start text-primary',
                 !searchParamsCategory && 'bg-primary-card text-primary-title',
               )}
               variant="ghost"
