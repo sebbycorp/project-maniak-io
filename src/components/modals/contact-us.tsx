@@ -49,7 +49,7 @@ export function ContactUs({ className }: HTMLProps<HTMLDivElement>) {
             </label>
           </div>
 
-          <Button type="submit" size="sm" className="px-3 mt-2 h-12 bg-primary-action">
+          <Button type="submit" size="sm" className="px-3 mt-2 h-12 bg-primary-action text-white">
             Submit
           </Button>
         </div>
