@@ -1,12 +1,14 @@
+import clsx from 'clsx';
+import { usePathname, useSearchParams } from 'next/navigation';
+import { useRouter } from 'next/router';
+
+import { SubscribeLayout } from '@/layouts/subscribe-layout';
+
 import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
+
 import { Playground, getAllPlaygrounds } from '@/helpers/playgrounds';
-import { SubscribeLayout } from '@/layouts/subscribe-layout';
-import clsx from 'clsx';
-import Link from 'next/link';
-import { useParams, usePathname, useSearchParams } from 'next/navigation';
-import { useRouter } from 'next/router';
 
 export default function Playgrounds({ playgrounds }: { playgrounds: Playground[] }) {
   const pathname = usePathname();
@@ -51,8 +53,8 @@ export default function Playgrounds({ playgrounds }: { playgrounds: Playground[]
       </div>
 
       <div className="my-7">
-        <div className="flex gap-6">
-          <div className="grid grid-cols-2 gap-4">
+        <div className="flex gap-6 max-sm:flex-col-reverse">
+          <div className="grid grid-cols-2 gap-4 max-sm:grid-cols-1">
             {filteredPlaygrounds.map((el, i) => (
               <Card className="max-w-[424px] min-w-full" key={i}>
                 <h3 className="text-2xl mt-3 text-[#101828] max-w-80 tracking-[0.48px] font-semibold bloc">
@@ -72,7 +74,7 @@ export default function Playgrounds({ playgrounds }: { playgrounds: Playground[]
               </Card>
             ))}
           </div>
-          <div className="flex flex-col items-start gap-1 w-72 max-w-full ml-auto">
+          <div className="flex flex-col items-start gap-1 w-72 max-w-full ml-auto max-sm:ml-0">
             <p className="mb-5 text-sm text-[#004EEB]">Categories</p>
             <Button
               className={clsx(

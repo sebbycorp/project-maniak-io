@@ -1,12 +1,13 @@
-import { BaseLayout } from '@/layouts/base-layout';
-import { Footer } from '@/sections/footer';
-import { Header } from '@/sections/header';
 import '@/styles/globals.css';
-import { Layout } from 'lucide-react';
 import type { NextPage } from 'next';
+import { ThemeProvider as NextThemesProvider } from 'next-themes';
 import type { AppProps } from 'next/app';
 import React from 'react';
-import { Toaster } from 'sonner';
+import { Toaster as Sonner } from 'sonner';
+
+import { BaseLayout } from '@/layouts/base-layout';
+
+import { Toaster } from '@/components/ui/toaster';
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: React.ReactElement) => React.ReactNode;
@@ -22,9 +23,15 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
   const ComponentWithlayout = getLayout(<Component {...pageProps} />);
 
   return (
-    <React.Fragment>
+    <NextThemesProvider
+      // attribute="class"
+      // defaultTheme="light"
+      // enableSystem
+      disableTransitionOnChange
+    >
+      <Sonner />
       <Toaster />
       {ComponentWithlayout}
-    </React.Fragment>
+    </NextThemesProvider>
   );
 }

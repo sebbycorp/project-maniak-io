@@ -1,7 +1,9 @@
-import { ContactUs } from '@/components/modals/contact-us';
-import { Breadcrumbs } from '@/components/ui/breadcrumbs';
-import { Button } from '@/components/ui/button';
 import { SubscribeLayout } from '@/layouts/subscribe-layout';
+
+import { ContactUs } from '@/components/modals/contact-us';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import { Breadcrumbs } from '@/components/ui/breadcrumbs';
+
 import { ServicesCards } from '@/sections/services-cards';
 
 export default function Home() {
@@ -23,6 +25,12 @@ export default function Home() {
         </p>
       </div>
       <ServicesCards />
+      <Alert className="mt-8 flex items-center justify-between p-16 border-[#2463EB] bg-[#2463EB] text-white max-md:flex-col max-md:gap-4 max-md:items-start max-md:px-6 max-md:py-8">
+        <AlertDescription className="text-2xl">
+          We are always in touch, ready to help you <br /> and answer all your questions.
+        </AlertDescription>
+        <ContactUs className="px-12 py-8" />
+      </Alert>
     </div>
   );
 }

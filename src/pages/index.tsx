@@ -1,14 +1,27 @@
-import { routes } from '@/constants/routes';
-import { Hero } from '@/sections/hero';
-import { TrustedBy } from '@/sections/trusted-by';
-import { Inter } from 'next/font/google';
-import Link from 'next/link';
+import { GetStaticPropsContext } from 'next';
 
-export default function Home() {
+import { Hero } from '@/sections/hero';
+import { PlaygroundPreview } from '@/sections/playground-preview';
+import { TrustedBy } from '@/sections/trusted-by';
+
+import { Playground, getPlaygroundData } from '@/helpers/playgrounds';
+
+export default function Home({ playground }: { playground: Playground }) {
   return (
     <div>
       <Hero />
+      <PlaygroundPreview playground={playground} />
       <TrustedBy />
     </div>
   );
+}
+
+export function getServerSideProps(context: GetStaticPropsContext) {
+  const playgroundData = getPlaygroundData('node-js');
+
+  return {
+    props: {
+      playground: playgroundData,
+    },
+  };
 }

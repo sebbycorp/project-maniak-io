@@ -1,20 +1,18 @@
-import { Post } from '@/helpers/posts';
-import { Link } from 'lucide-react';
+import { CopyIcon } from '@radix-ui/react-icons';
+import { clsx } from 'clsx';
 import Image from 'next/image';
 import React from 'react';
-import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import ReactMarkdown, { Components } from 'react-markdown';
-import { LinearGradient } from '@/components/ui/linear-gradient';
-import { Badge } from '@/components/ui/badge';
-import { Avatar, AvatarImage } from '@/components/ui/avatar';
-import { CopyIcon } from '@radix-ui/react-icons';
-
-import avatar from '/public/avatar/avatar.jpg';
+import ReactMarkdown from 'react-markdown';
 import { toast } from 'sonner';
 
-import style from './markdown.module.css';
-import { clsx } from 'clsx';
+import { Avatar } from '@/components/ui/avatar';
+import { Badge } from '@/components/ui/badge';
+import { LinearGradient } from '@/components/ui/linear-gradient';
+
+import { Post } from '@/helpers/posts';
+
+import { Markdown } from '../markdown';
+import avatar from '/public/avatar/avatar.jpg';
 
 export function PostContent({ post }: { post: Post }) {
   const { title, tags, date, content } = post;
@@ -27,7 +25,7 @@ export function PostContent({ post }: { post: Post }) {
 
   return (
     <div>
-      <div className="w-screen relative h-[496px] bg-[#F9FAFB] flex items-center justify-center">
+      <div className="w-screen relative py-24 bg-[#F9FAFB] flex items-center justify-center">
         <div className="container max-w-[960px] flex flex-col items-center">
           {tags ? (
             <div className="inline-flex gap-1 items-center justify-center bg-[#EFF4FF] rounded-[24px] p-2">
@@ -38,7 +36,7 @@ export function PostContent({ post }: { post: Post }) {
               ))}
             </div>
           ) : null}
-          <h1 className="text-5xl font-semibold my-3 font-Bai text-center tracking-[0.96px] leading-[60px]">
+          <h1 className="text-5xl font-semibold my-3 font-Bai text-center tracking-[0.96px] leading-[60px] max-sm:text-4xl">
             {title}
           </h1>
           <div className="flex items-center gap-2 mt-4">
@@ -55,33 +53,8 @@ export function PostContent({ post }: { post: Post }) {
         <div></div>
       </div>
       <div>
-        <article className={clsx(content && 'py-24', 'container', 'max-w-3xl')}>
-          <ReactMarkdown
-            components={{
-              h1: 'h2',
-              h5: 'h4',
-              h6: 'h4',
-              code(props) {
-                const { children } = props;
-
-                return (
-                  <div className="relative border rounded-lg border-[#EAECF0] bg-[#F9FAFB] py-0 px-4">
-                    <p className="text-[#175CD3] py-4 max-w-[98%]">{children}</p>
-                    <CopyIcon
-                      className="absolute top-7 right-5 cursor-pointer"
-                      onClick={() => {
-                        navigator.clipboard.writeText(children as string);
-                        toast.success('Code copied successfully!');
-                      }}
-                    />
-                  </div>
-                );
-              },
-            }}
-            className={style.markdown}
-          >
-            {content}
-          </ReactMarkdown>
+        <article className={clsx(content && 'py-24 max-sm:py-12', 'container', 'max-w-3xl')}>
+          <Markdown>{content}</Markdown>
         </article>
         <hr />
       </div>
