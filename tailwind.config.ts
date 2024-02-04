@@ -37,6 +37,10 @@ const config = {
         foreground: 'hsl(var(--foreground))',
         primary: {
           DEFAULT: 'hsl(var(--primary))',
+          title: 'hsl(var(--primary-title))',
+          action: 'hsl(var(--primary-action))',
+          card: 'hsl(var(--primary-card))',
+          link: 'hsl(var(--primary-link))',
           foreground: 'hsl(var(--primary-foreground))',
         },
         secondary: {

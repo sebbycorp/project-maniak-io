@@ -30,7 +30,7 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <div className="bg-[#101828] py-8">
+      <div className="bg-primary-title dark:bg-background py-8">
         <div className="container flex items-center justify-between max-lg:flex-col max-lg:items-start max-lg:gap-6">
           <ul className="flex gap-8 uppercase">
             {routes.map((el, i) => (

@@ -17,15 +17,15 @@ export default function Home() {
       />
 
       <div>
-        <h2 className="text-[48px] font-semibold text-[#101828] mt-2">Services</h2>
-        <p className="text-[#7F8A99] font-medium mt-4 mb-4">
+        <h2 className="text-[48px] font-semibold text-primary-title mt-2">Services</h2>
+        <p className="text-primary font-medium mt-4 mb-4">
           Explore our latest insights on DevOps. Get practical tips on tools like Azure, Docker, and
           Kubernetes. <br /> Straightforward advice for your DevOps. Join us and make your DevOps
           journey better.
         </p>
       </div>
       <ServicesCards />
-      <Alert className="mt-8 flex items-center justify-between p-16 border-[#2463EB] bg-[#2463EB] text-white max-md:flex-col max-md:gap-4 max-md:items-start max-md:px-6 max-md:py-8">
+      <Alert className="mt-8 flex items-center justify-between p-16 border-[#2463EB] bg-primary-action text-white max-md:flex-col max-md:gap-4 max-md:items-start max-md:px-6 max-md:py-8">
         <AlertDescription className="text-2xl">
           We are always in touch, ready to help you <br /> and answer all your questions.
         </AlertDescription>

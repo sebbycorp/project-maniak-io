@@ -4,8 +4,6 @@ import { LoginButton } from '@/components/login-button';
 import { MobileMenu } from '@/components/mobile-menu';
 import { ContactUs } from '@/components/modals/contact-us';
 import { ThemeSwitcher } from '@/components/theme-switcher';
-import { Button } from '@/components/ui/button';
-import { LockIcon } from '@/components/ui/lock-icon';
 import { Logo } from '@/components/ui/logo';
 import { Separator } from '@/components/ui/separator';
 
@@ -22,7 +20,7 @@ export function Header() {
         <nav className="flex gap-8 items-center max-lg:gap-4 max-md:hidden">
           {routes.map((route) => (
             <Link
-              className="text-[#7F8A99] hover:text-[#ccc] transition-colors"
+              className="text-primary hover:text-[#ccc] transition-colors"
               key={route.name}
               href={route.url}
             >

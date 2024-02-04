@@ -40,7 +40,7 @@ const PaginationLink = ({ className, isActive, size = 'icon', ...props }: Pagina
         variant: isActive ? 'outline' : 'ghost',
         size,
       }),
-      isActive && 'bg-[#F9FAFB] border-none',
+      isActive && 'bg-primary-card border-none',
       className,
     )}
     {...props}
