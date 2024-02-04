@@ -13,8 +13,12 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 210 11% 57%;
     --primary-foreground: 210 40% 98%;
+    --primary-title: 214 40% 10%;
+    --primary-action: 214 90% 51%;
+    --primary-card: 210 28% 97%;
+    --primary-link: 216 87% 43%;
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
@@ -45,8 +49,12 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
+    --primary: 0 0% 100%;
     --primary-foreground: 222.2 47.4% 11.2%;
+    --primary-title: 0 0% 100%;
+    --primary-action: 214 90% 51%;
+    --primary-card: 210 28% 10%;
+    --primary-link: 216 87% 43%;
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
@@ -86,7 +94,7 @@
 }
 
 .markdown p {
-  @apply text-[#7F8A99]   tracking-[0.4px] my-2;
+  @apply text-primary   tracking-[0.4px] my-2;
 }
 
 .markdown img {
@@ -94,15 +102,15 @@
 }
 
 .markdown h2 {
-  @apply text-3xl tracking-[0.6px] font-semibold text-[#101828] my-4;
+  @apply text-3xl tracking-[0.6px] font-semibold text-primary-title my-4;
 }
 
 .markdown h3 {
-  @apply text-2xl tracking-[0.48px] font-semibold text-[#101828] my-4;
+  @apply text-2xl tracking-[0.48px] font-semibold text-primary-title my-4;
 }
 
 .markdown h4 {
-  @apply text-xl tracking-[0.48px] font-semibold text-[#101828] my-4;
+  @apply text-xl tracking-[0.48px] font-semibold text-primary-title my-4;
 }
 
 .markdown pre {
@@ -114,9 +122,9 @@
 }
 
 .markdown li {
-  @apply text-[#7F8A99];
+  @apply text-primary;
 }
 
 .markdown a {
-  @apply text-[#2463EB] underline underline-offset-2;
+  @apply text-primary-action underline underline-offset-2;
 }

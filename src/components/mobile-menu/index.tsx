@@ -1,25 +1,21 @@
+import { useTheme } from 'next-themes';
 import Link from 'next/link';
 import { useState } from 'react';
 
 import { LoginButton } from '@/components/login-button';
 import { ContactUs } from '@/components/modals/contact-us';
 import { ThemeSwitcher } from '@/components/theme-switcher';
-import { Button } from '@/components/ui/button';
 import { Logo } from '@/components/ui/logo';
 import { Separator } from '@/components/ui/separator';
-import {
-  Sheet,
-  SheetClose,
-  SheetContent,
-  SheetFooter,
-  SheetHeader,
-  SheetTrigger,
-} from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetFooter, SheetHeader, SheetTrigger } from '@/components/ui/sheet';
 
 import { routes } from '@/constants/routes';
 
 export function MobileMenu() {
   const [open, setOpen] = useState(false);
+  const { theme } = useTheme();
+
+  const fillColor = theme === 'dark' ? 'white' : 'black';
 
   return (
     <div className="hidden max-md:block">
@@ -35,7 +31,7 @@ export function MobileMenu() {
             >
               <path
                 d="M3 12H21M3 6H21M3 18H21"
-                stroke="#101828"
+                stroke={fillColor}
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
@@ -55,7 +51,7 @@ export function MobileMenu() {
             <ul className="flex flex-col gap-6">
               {routes.map((route) => (
                 <Link
-                  className="text-[#7F8A99] hover:text-[#ccc] transition-colors text-lg"
+                  className="text-primary hover:text-[#ccc] transition-colors text-lg"
                   href={route.url}
                   key={route.name}
                   onClick={() => setOpen(false)}

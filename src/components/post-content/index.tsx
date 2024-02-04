@@ -1,17 +1,14 @@
-import { CopyIcon } from '@radix-ui/react-icons';
 import { clsx } from 'clsx';
 import Image from 'next/image';
 import React from 'react';
-import ReactMarkdown from 'react-markdown';
-import { toast } from 'sonner';
 
+import { Markdown } from '@/components/markdown';
 import { Avatar } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
 import { LinearGradient } from '@/components/ui/linear-gradient';
 
 import { Post } from '@/helpers/posts';
 
-import { Markdown } from '../markdown';
 import avatar from '/public/avatar/avatar.jpg';
 
 export function PostContent({ post }: { post: Post }) {
@@ -25,7 +22,7 @@ export function PostContent({ post }: { post: Post }) {
 
   return (
     <div>
-      <div className="w-screen relative py-24 bg-[#F9FAFB] flex items-center justify-center">
+      <div className="w-screen relative py-24 bg-primary-card flex items-center justify-center">
         <div className="container max-w-[960px] flex flex-col items-center">
           {tags ? (
             <div className="inline-flex gap-1 items-center justify-center bg-[#EFF4FF] rounded-[24px] p-2">
@@ -44,7 +41,7 @@ export function PostContent({ post }: { post: Post }) {
               <Image src={avatar} alt="avatar" />
             </Avatar>
             <div className="flex flex-col">
-              <p className="text-[#101828] font-semibold">Sebastian Maniak</p>
+              <p className="text-primary-title font-semibold">Sebastian Maniak</p>
               <p className="text-[#1018284d] font-medium">{date ? formattedDate : null}</p>
             </div>
           </div>

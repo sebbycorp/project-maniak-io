@@ -56,8 +56,8 @@ export default function Blog({ posts }: { posts: Post[] }) {
       />
 
       <div>
-        <h2 className="text-[48px] font-semibold text-[#101828] mt-2">Blog</h2>
-        <p className="text-[#7F8A99] font-medium mt-4">
+        <h2 className="text-[48px] font-semibold text-primary-title mt-2">Blog</h2>
+        <p className="text-primary font-medium mt-4">
           Explore our latest insights on DevOps. Get practical tips on tools like Azure, Docker, and
           Kubernetes. <br /> Straightforward advice for your DevOps. Join us and make your DevOps
           journey better.
@@ -75,17 +75,15 @@ export default function Blog({ posts }: { posts: Post[] }) {
                 ))}
               </div>
             ) : null}
-            <h3 className="text-2xl mt-3 text-[#101828] max-w-80 tracking-[0.48px] font-semibold bloc">
+            <h3 className="text-2xl mt-3 text-primary-title max-w-80 tracking-[0.48px] font-semibold bloc">
               <div className="line-clamp-2 max-sm:line-clamp-3">{el.title}</div>
             </h3>
 
-            <p className="mt-4 mb-8 text-[#7F8A99] tracking-[0.32px] font-medium">
-              {el.description}
-            </p>
+            <p className="mt-4 mb-8 text-primary tracking-[0.32px] font-medium">{el.description}</p>
 
             <Link
               href={pathname + '/' + el.slug}
-              className="text-[#2463EB] underline underline-offset-2 inline-block mt-auto"
+              className="text-primary-action underline underline-offset-2 inline-block mt-auto"
             >
               Learn more
             </Link>
