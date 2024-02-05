@@ -1,6 +1,6 @@
 import { useTheme } from 'next-themes';
 import Link from 'next/link';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 import { LoginButton } from '@/components/login-button';
 import { ContactUs } from '@/components/modals/contact-us';
@@ -12,10 +12,19 @@ import { Sheet, SheetContent, SheetFooter, SheetHeader, SheetTrigger } from '@/c
 import { routes } from '@/constants/routes';
 
 export function MobileMenu() {
+  const [mounted, setMounted] = React.useState(false);
   const [open, setOpen] = useState(false);
   const { theme } = useTheme();
 
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const fillColor = theme === 'dark' ? 'white' : 'black';
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <div className="hidden max-md:block">

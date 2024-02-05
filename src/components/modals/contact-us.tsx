@@ -21,7 +21,7 @@ export function ContactUs({ className }: HTMLProps<HTMLDivElement>) {
         <Button
           variant="outline"
           className={twMerge(
-            'bg-primary-link hover:bg-primary-link text-white hover:text-white',
+            'bg-primary-action hover:bg-primary-action text-white hover:text-white',
             className,
           )}
         >

@@ -1,12 +1,23 @@
 import { useTheme } from 'next-themes';
+import React from 'react';
 
 type LogoProps = {
   variant?: 'dark' | 'light';
 };
 
 export function Logo({ variant = 'dark' }: LogoProps) {
+  const [mounted, setMounted] = React.useState(false);
   const { theme } = useTheme();
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const fillColor = variant === 'dark' && theme !== 'dark' ? '#000' : '#fff';
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <svg
