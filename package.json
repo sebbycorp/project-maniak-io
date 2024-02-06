@@ -12,9 +12,9 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@ampt/data": "^1.0.17",
+    "@ampt/data": "^1.0.18",
     "@ampt/nextjs": "^2",
-    "@ampt/sdk": "^1.0.13",
+    "@ampt/sdk": "^1.0.14",
     "@radix-ui/react-avatar": "^1.0.4",
     "@radix-ui/react-checkbox": "^1.0.4",
     "@radix-ui/react-dialog": "^1.0.5",
