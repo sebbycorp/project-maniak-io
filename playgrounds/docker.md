@@ -2,7 +2,7 @@
 title: 'Docker Compose Learning '
 description: 'Docker Compose leanring'
 category: 'Containers'
-terminal: 'https://localhost:8000'
+terminal: 'https://ttyd-terminal-demo.fly.dev'
 ---
 
 Node.js is a cross-platform, open-source JavaScript runtime environment that can run on Windows, Linux, Unix, macOS, and more. Node.js runs on the V8 JavaScript engine, and executes JavaScript code outside a web browser.
