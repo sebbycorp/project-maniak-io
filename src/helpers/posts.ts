@@ -8,6 +8,7 @@ type PostData = {
   description: string;
   tags: string[];
   image?: string;
+  mathjax?: boolean;
 };
 
 export type Post = PostData & {
