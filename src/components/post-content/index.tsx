@@ -12,7 +12,7 @@ import { Post } from '@/helpers/posts';
 import avatar from '/public/avatar/avatar.jpg';
 
 export function PostContent({ post }: { post: Post }) {
-  const { title, tags, date, content } = post;
+  const { title, tags, date, content, mathjax } = post;
 
   const formattedDate = new Date(date).toLocaleDateString('en-US', {
     day: 'numeric',
@@ -51,7 +51,7 @@ export function PostContent({ post }: { post: Post }) {
       </div>
       <div>
         <article className={clsx(content && 'py-24 max-sm:py-12', 'container', 'max-w-3xl')}>
-          <Markdown>{content}</Markdown>
+          <Markdown mathjax={mathjax}>{content}</Markdown>
         </article>
         <hr />
       </div>

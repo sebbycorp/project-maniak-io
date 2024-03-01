@@ -2,9 +2,7 @@ import { useTheme } from 'next-themes';
 import React from 'react';
 
 export function CopyIcon(props: React.HTMLAttributes<SVGElement>) {
-  const { theme } = useTheme();
-
-  const fillColor = theme === 'dark' ? 'white' : '#1C1C1C';
+  const fillColor = 'white';
 
   return (
     <svg
