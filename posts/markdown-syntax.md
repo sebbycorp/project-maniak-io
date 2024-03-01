@@ -1,16 +1,12 @@
 ---
 title: 'Markdown Syntax'
-date: '2021-04-03T23:29:21+05:30'
-draft: false
-github_link: 'https://github.com/gurusabarish/hugo-profile'
-author: 'Gurusabarish'
+date: '2021-04-03'
 tags:
   - Markdown syntax
   - Sample
   - example
 image: /images/post.jpg
-description: ''
-toc:
+description: 'Quick overview of all the Markdown syntax elements'
 ---
 
 ## Paragraph
@@ -21,7 +17,7 @@ Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sap
 
 ## Blockquotes
 
-The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a `footer` or `cite` element, and optionally with in-line changes such as annotations and abbreviations.
+> The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a **footer** or **cite** element, and optionally with in-line changes such as annotations and abbreviations.
 
 ### Blockquote without attribution
 
@@ -30,10 +26,10 @@ The blockquote element represents content that is quoted from another source, op
 
 ### Blockquote with attribution
 
-> Don't communicate by sharing memory, share memory by communicating.</p>
-> — <cite>Rob Pike[^1]</cite>
+> Don't communicate by sharing memory, share memory by communicating.
+> ::cite[Rob Pike]
 
-[^1]: The above quote is excerpted from Rob Pike's [talk](https://www.youtube.com/watch?v=PAAkCSZUG1c) during Gopherfest, November 18, 2015.
+The above quote is excerpted from Rob Pike's [talk](https://www.youtube.com/watch?v=PAAkCSZUG1c) during Gopherfest, November 18, 2015.
 
 ## Tables
 
@@ -46,9 +42,9 @@ Tables aren't part of the core Markdown spec, but Hugo supports supports them ou
 
 ### Inline Markdown within tables
 
-| Inline&nbsp;&nbsp;&nbsp; | Markdown&nbsp;&nbsp;&nbsp; | In&nbsp;&nbsp;&nbsp;                | Table  |
-| ------------------------ | -------------------------- | ----------------------------------- | ------ |
-| _italics_                | **bold**                   | ~~strikethrough~~&nbsp;&nbsp;&nbsp; | `code` |
+| Inline&nbsp;&nbsp;&nbsp; | Markdown&nbsp;&nbsp;&nbsp; | In&nbsp;&nbsp;&nbsp;                | Table |
+| ------------------------ | -------------------------- | ----------------------------------- | ----- |
+| _italics_                | **bold**                   | ~~strikethrough~~&nbsp;&nbsp;&nbsp; | text  |
 
 ## Code Blocks
 
@@ -80,22 +76,6 @@ Tables aren't part of the core Markdown spec, but Hugo supports supports them ou
     </body>
     </html>
 
-### Code block with Hugo's internal highlight shortcode
-
-{{< highlight html >}}
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Example HTML5 Document</title>
-</head>
-<body>
-  <p>Test</p>
-</body>
-</html>
-{{< /highlight >}}
-
 ## List Types
 
 ### Ordered List
@@ -117,8 +97,6 @@ Tables aren't part of the core Markdown spec, but Hugo supports supports them ou
   2. Second Sub-item
 
 ## Headings
-
-The following HTML `<h1>`—`<h6>` elements represent six levels of section headings. `<h1>` is the highest section level while `<h6>` is the lowest.
 
 # H1
 

@@ -6,7 +6,7 @@ tags:
   - Mathjax
   - example
 image: /images/mathjax.png
-description: ''
+description: 'Math equations can be rendered using Mathjax syntax with AMS symbol support.'
 mathjax: true
 ---
 
@@ -16,7 +16,7 @@ Math equations can be rendered using [Mathjax](https://www.mathjax.org) syntax w
 
 Optionally enable this on a per-page basis by adding to your frontmatter `mathjax: true`
 
-Then, use "$$ ... $$" on a line by itself to render a block equation:
+Then, use " **$$** your math equation **$$** " pattern on a line by itself to render a block equation:
 
 ```
 $$ | Pr_{x \leftarrow P_{1}} [A(x) = 1] - Pr_{x \leftarrow P_{2}} [A(x) = 1] | < \text{negligible} $$
