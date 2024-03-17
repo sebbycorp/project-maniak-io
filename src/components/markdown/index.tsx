@@ -1,9 +1,13 @@
 import { MathJax, MathJaxContext } from 'better-react-mathjax';
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { dark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { Prism } from 'react-syntax-highlighter';
+import { a11yDark, darcula, dark, xonokai } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import rehypeRaw from 'rehype-raw';
+import remarkBreaks from 'remark-breaks';
+import remarkDirective from 'remark-directive';
 import remarkGfm from 'remark-gfm';
+import remarkRehype from 'remark-rehype';
 import { toast } from 'sonner';
 
 import { CopyIcon } from '@/components/ui/copy-icon';
@@ -11,14 +15,12 @@ import { CopyIcon } from '@/components/ui/copy-icon';
 export function Markdown({ children, mathjax = false }: { children: string; mathjax?: boolean }) {
   return (
     <ReactMarkdown
-      remarkPlugins={[remarkGfm]}
+      rehypePlugins={[rehypeRaw]}
+      remarkPlugins={[remarkGfm, remarkBreaks, remarkDirective, remarkRehype]}
       className="markdown"
       components={{
-        h1: 'h2',
-        h5: 'h4',
-        h6: 'h4',
         code(props) {
-          const { children, className, node, ...rest } = props;
+          const { className, children } = props;
           const match = /language-(\w+)/.exec(className || '');
           return (
             <React.Fragment>
@@ -38,12 +40,19 @@ export function Markdown({ children, mathjax = false }: { children: string; math
                   </MathJax>
                 </MathJaxContext>
               ) : (
-                <span className="relative block border rounded-lg border-[#EAECF0] bg-primary-card py-0 px-4 my-2">
-                  <span className="text-[#175CD3] text-lg text-balance block py-4 max-w-[95%]">
-                    {children}
-                  </span>
+                <span className="relative block border-[#EAECF0] py-0 my-2">
+                  <Prism
+                    style={xonokai}
+                    language={match ? match[1] : undefined}
+                    PreTag="span"
+                    className="block mockup-code scrollbar-thin scrollbar-track-base-content/5 scrollbar-thumb-base-content/40 scrollbar-track-rounded-md scrollbar-thumb-rounded"
+                    showLineNumbers={true}
+                    useInlineStyles={true}
+                  >
+                    {String(props.children).replace(/\n$/, '')}
+                  </Prism>
                   <CopyIcon
-                    className="absolute top-7 right-5 cursor-pointer"
+                    className="absolute top-[16px] right-5 cursor-pointer "
                     onClick={() => {
                       navigator.clipboard.writeText(children as string);
                       toast.success('Code copied successfully!');

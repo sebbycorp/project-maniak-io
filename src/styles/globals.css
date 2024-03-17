@@ -94,11 +94,15 @@
 }
 
 .markdown p {
-  @apply text-primary   tracking-[0.4px] my-2;
+  @apply text-primary tracking-[0.4px] my-2;
 }
 
 .markdown img {
   @apply border rounded-xl border-[#EAECF0];
+}
+
+.markdown h1 {
+  @apply text-4xl tracking-[0.6px] font-semibold text-primary-title my-4;
 }
 
 .markdown h2 {
@@ -111,6 +115,14 @@
 
 .markdown h4 {
   @apply text-xl tracking-[0.48px] font-semibold text-primary-title my-4;
+}
+
+.markdown h5 {
+  @apply tracking-[0.48px] font-semibold text-primary-title my-4;
+}
+
+.markdown h6 {
+  @apply text-sm tracking-[0.48px] font-semibold text-primary-title my-4;
 }
 
 .markdown pre {
@@ -127,4 +139,44 @@
 
 .markdown a {
   @apply text-primary-action underline underline-offset-2;
+}
+
+.markdown blockquote {
+  @apply border-l-4 border-[#175CD3] pl-4 my-4;
+}
+
+.markdown ul {
+  @apply pl-4;
+  list-style: initial;
+}
+
+.markdown ol {
+  @apply pl-4;
+  list-style: auto;
+}
+
+.markdown ul ol {
+  @apply pl-4;
+}
+
+.markdown ul ul {
+  @apply pl-4;
+}
+
+.markdown ol ul {
+  @apply pl-4;
+}
+
+.markdown ol ol {
+  @apply pl-4;
+}
+
+.markdown table {
+  @apply w-full my-4 border-collapse text-left;
+}
+
+.markdown table td,
+table th,
+table tr {
+  @apply border border-border border-collapse;
 }

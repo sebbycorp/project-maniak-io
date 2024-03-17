@@ -28,6 +28,7 @@
     "@types/react": "18.2.48",
     "@types/react-dom": "18.2.18",
     "autoprefixer": "10.4.17",
+    "better-react-mathjax": "^2.0.3",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "eslint": "8.56.0",
@@ -44,6 +45,12 @@
     "react-resizable-panels": "1.0.0",
     "react-responsive": "^9.0.2",
     "react-syntax-highlighter": "^15.5.0",
+    "rehype-raw": "^7.0.0",
+    "remark-abbr": "^1.4.1",
+    "remark-breaks": "^4.0.0",
+    "remark-directive": "^3.0.0",
+    "remark-gfm": "^4.0.0",
+    "remark-rehype": "^11.1.0",
     "sonner": "^1.3.1",
     "tailwind-merge": "^2.2.0",
     "tailwindcss": "3.4.1",
@@ -63,6 +70,7 @@
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
     "@types/react-syntax-highlighter": "^15.5.11",
+    "@types/remark-abbr": "^1.4.4",
     "husky": "^8.0.0",
     "prettier": "^3.2.4"
   },

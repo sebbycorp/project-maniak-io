@@ -1,16 +1,12 @@
 ---
 title: 'Emoji Support'
-date: '2021-04-03T22:53:58+05:30'
-draft: false
-github_link: 'https://github.com/gurusabarish/hugo-profile'
-author: 'Gurusabarish'
+date: '2021-04-03'
 tags:
   - Emoji support
   - Sample
   - example
 image: /images/post.jpg
-description: ''
-toc:
+description: 'Emoji can be enabled in a Hugo project in a number of ways'
 ---
 
 Emoji can be enabled in a Hugo project in a number of ways. :zap:
@@ -27,9 +23,13 @@ The [Emoji cheat sheet](http://www.emoji-cheat-sheet.com/) is a useful reference
 
 **N.B.** The above steps enable Unicode Standard emoji characters and sequences in Hugo, however the rendering of these glyphs depends on the browser and the platform. To style the emoji you can either use a third party emoji font or a font stack; e.g.
 
-```
+```css
 .emoji {
-  font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols;
-
+  font-family:
+    Apple Color Emoji,
+    Segoe UI Emoji,
+    NotoColorEmoji,
+    Segoe UI Symbol Android Emoji,
+    EmojiSymbols;
 }
 ```
